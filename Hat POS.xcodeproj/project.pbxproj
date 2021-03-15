@@ -13,6 +13,8 @@
 		C6C9997E25FA75F700C8ECC5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C6C9997C25FA75F700C8ECC5 /* Main.storyboard */; };
 		C6C9998025FA75F800C8ECC5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C6C9997F25FA75F800C8ECC5 /* Assets.xcassets */; };
 		C6C9998325FA75F800C8ECC5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C6C9998125FA75F800C8ECC5 /* LaunchScreen.storyboard */; };
+		C6C9998C25FBFD9000C8ECC5 /* HomeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6C9998B25FBFD9000C8ECC5 /* HomeModel.swift */; };
+		C6C9998F25FBFE6A00C8ECC5 /* Inventory.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6C9998E25FBFE6A00C8ECC5 /* Inventory.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		C6C9997F25FA75F800C8ECC5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C6C9998225FA75F800C8ECC5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C6C9998425FA75F800C8ECC5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C6C9998B25FBFD9000C8ECC5 /* HomeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeModel.swift; sourceTree = "<group>"; };
+		C6C9998E25FBFE6A00C8ECC5 /* Inventory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Inventory.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +67,8 @@
 				C6C9997F25FA75F800C8ECC5 /* Assets.xcassets */,
 				C6C9998125FA75F800C8ECC5 /* LaunchScreen.storyboard */,
 				C6C9998425FA75F800C8ECC5 /* Info.plist */,
+				C6C9998B25FBFD9000C8ECC5 /* HomeModel.swift */,
+				C6C9998E25FBFE6A00C8ECC5 /* Inventory.swift */,
 			);
 			path = "Hat POS";
 			sourceTree = "<group>";
@@ -137,7 +143,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C6C9998C25FBFD9000C8ECC5 /* HomeModel.swift in Sources */,
 				C6C9997B25FA75F700C8ECC5 /* ViewController.swift in Sources */,
+				C6C9998F25FBFE6A00C8ECC5 /* Inventory.swift in Sources */,
 				C6C9997725FA75F700C8ECC5 /* AppDelegate.swift in Sources */,
 				C6C9997925FA75F700C8ECC5 /* SceneDelegate.swift in Sources */,
 			);
