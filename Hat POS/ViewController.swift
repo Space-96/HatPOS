@@ -74,6 +74,5 @@ class ViewController: UIViewController, HomeModelDelegate, UITableViewDataSource
         
         return cell
     }
-    
 }
 
