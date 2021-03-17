@@ -9,12 +9,11 @@ import UIKit
 
 class ViewController: UIViewController, HomeModelDelegate, UITableViewDataSource, UITableViewDelegate {
     
+    
+    
     @IBOutlet weak var tableView: UITableView!
     
-    @IBOutlet weak var productNameView: UITableView!
-    
     var homeModel = HomeModel()
-    
     var items = [Inventory]()
 
     override func viewDidLoad() {
@@ -23,12 +22,12 @@ class ViewController: UIViewController, HomeModelDelegate, UITableViewDataSource
         // Set self as the tableview's data source and delegate
         tableView.delegate = self
         tableView.dataSource = self
-        productNameView.delegate = self
-        productNameView.delegate = self
         
         //Initiate calling the items download
         homeModel.getItems()
         homeModel.delegate = self
+        let nib = UINib(nibName: "InventoryCell", bundle: nil)
+        self.tableView.register(nib, forCellReuseIdentifier: "InvCell")
         // Do any additional setup after loading the view.
     }
     
@@ -49,30 +48,16 @@ class ViewController: UIViewController, HomeModelDelegate, UITableViewDataSource
     // Mark: - UITableView Delegate Methods
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        
         return items.count
     }
-    
-    func productNameView(_ productNameView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        
-        return items.count
-    }
-    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: "BasicCell", for: indexPath)
-        
-        cell.textLabel?.text = items[indexPath.row].productID
-        
+        let cell = tableView.dequeueReusableCell(withIdentifier: "InvCell", for: indexPath) as! InventoryCell
+        cell.idLabel.text = items[indexPath.row].productID
+        cell.productNameLabel.text = items[indexPath.row].productName
+        cell.qtyLabel.text = items[indexPath.row].quantity
         return cell
-    }
-    func productNameView(_ productNameView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell = productNameView.dequeueReusableCell(withIdentifier: "ProductName", for: indexPath)
-        
-        cell.textLabel?.text = items[indexPath.row].productName
-        
-        return cell
     }
 }
 
