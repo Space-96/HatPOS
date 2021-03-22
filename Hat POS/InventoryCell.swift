@@ -15,16 +15,17 @@ class InventoryCell: UITableViewCell{
     @IBOutlet weak var productNameView: UIView!
     @IBOutlet weak var productNameLabel: UILabel!
     
-    
-    @IBOutlet weak var productDescriptionView: UIView!
-    @IBOutlet weak var productDescriptionLabel: UILabel!
-    
     @IBOutlet weak var qtyView: UIView!
     @IBOutlet weak var qtyLabel: UILabel!
+    
+    @IBOutlet weak var purchasePriceView: UIView!
+    @IBOutlet weak var purchasePriceLabel: UILabel!
     
     override func awakeFromNib(){
         super.awakeFromNib()
         // Initialization code
+        
+        
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
