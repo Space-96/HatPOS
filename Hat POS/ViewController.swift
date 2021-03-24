@@ -13,11 +13,20 @@ class ViewController: UIViewController, HomeModelDelegate, UITableViewDataSource
     
     @IBOutlet weak var tableView: UITableView!
     
+    @IBOutlet weak var MainMenuView: UIView!
+    @IBOutlet weak var LogoutView: UIView!
+    
+    @IBOutlet weak var Logo: UIImageView!
+    
     var homeModel = HomeModel()
     var items = [Inventory]()
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        MainMenuView.layer.cornerRadius = 20
+        LogoutView.layer.cornerRadius = 20
+        Logo.layer.cornerRadius = 40
         
         // Set self as the tableview's data source and delegate
         tableView.delegate = self
@@ -28,6 +37,7 @@ class ViewController: UIViewController, HomeModelDelegate, UITableViewDataSource
         homeModel.delegate = self
         let nib = UINib(nibName: "InventoryCell", bundle: nil)
         self.tableView.register(nib, forCellReuseIdentifier: "InvCell")
+        self.tableView.rowHeight = UITableView.automaticDimension
         // Do any additional setup after loading the view.
     }
     
@@ -56,6 +66,8 @@ class ViewController: UIViewController, HomeModelDelegate, UITableViewDataSource
         cell.idLabel.text = items[indexPath.row].productID
         cell.productNameLabel.text = items[indexPath.row].productName
         cell.qtyLabel.text = items[indexPath.row].quantity
+        cell.purchasePriceLabel.text = items[indexPath.row].unitPurchasePrice
+        
         return cell
         
     }
