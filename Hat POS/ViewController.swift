@@ -10,17 +10,22 @@ import UIKit
 class ViewController: UIViewController, HomeModelDelegate, UITableViewDataSource, UITableViewDelegate {
     
     
-    
     @IBOutlet weak var tableView: UITableView!
-    
     @IBOutlet weak var MainMenuView: UIView!
     @IBOutlet weak var LogoutView: UIView!
-    
     @IBOutlet weak var Logo: UIImageView!
+    @IBAction func transactionButton() {
+        guard let vc = storyboard?.instantiateViewController(identifier: "transaction_vc") as? TransactionViewController else{
+            return
+        }
+        present(vc, animated: true)
+    }
+    
     
     var homeModel = HomeModel()
     var items = [Inventory]()
 
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
