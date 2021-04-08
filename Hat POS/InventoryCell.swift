@@ -21,6 +21,7 @@ class InventoryCell: UITableViewCell{
     @IBOutlet weak var purchasePriceView: UIView!
     @IBOutlet weak var purchasePriceLabel: UILabel!
     
+    
     override func awakeFromNib(){
         super.awakeFromNib()
         // Initialization code
