@@ -64,7 +64,7 @@ class TransactionModel: NSObject {
                 let jsonDict = jsonResult as! [String:String]
                 
                 // Create new Transaction and set its properties
-                let tran = Transactions(transactionID: jsonDict["transactionID"]!, customerID: jsonDict["customerID"]!, productID: jsonDict["productID"]!, date: jsonDict["date"]!, time: jsonDict["time"]!, paymentType: jsonDict["paymentType"]!, subTotal: jsonDict["subTotal"]!, tax: jsonDict["tax"]!, total: jsonDict["total"]!)
+                let tran = Transactions(transactionID: jsonDict["transactionID"]!, employeeID: jsonDict["employeeID"]!, customerID: jsonDict["customerID"]!, productID: jsonDict["productID"]!, date: jsonDict["date"]!, subTotal: jsonDict["subTotal"]!, tax: jsonDict["tax"]!, total: jsonDict["total"]!)
                 transactionArray.append(tran)
             }
             

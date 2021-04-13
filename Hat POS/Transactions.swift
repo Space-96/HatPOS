@@ -10,11 +10,10 @@ import Foundation
 struct Transactions {
     
     var transactionID = ""
+    var employeeID = ""
     var customerID = ""
     var productID = ""
     var date = ""
-    var time = ""
-    var paymentType = ""
     var subTotal = ""
     var tax = ""
     var total = ""

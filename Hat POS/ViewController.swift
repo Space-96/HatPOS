@@ -14,6 +14,7 @@ class ViewController: UIViewController, HomeModelDelegate, UITableViewDataSource
     @IBOutlet weak var MainMenuView: UIView!
     @IBOutlet weak var LogoutView: UIView!
     @IBOutlet weak var Logo: UIImageView!
+    @IBOutlet weak var TransactionButtonView: UIView!
     @IBAction func transactionButton() {
         guard let vc = storyboard?.instantiateViewController(identifier: "transaction_vc") as? TransactionViewController else{
             return
@@ -32,6 +33,8 @@ class ViewController: UIViewController, HomeModelDelegate, UITableViewDataSource
         MainMenuView.layer.cornerRadius = 20
         LogoutView.layer.cornerRadius = 20
         Logo.layer.cornerRadius = 40
+        TransactionButtonView.layer.cornerRadius = 20
+        
         
         // Set self as the tableview's data source and delegate
         tableView.delegate = self

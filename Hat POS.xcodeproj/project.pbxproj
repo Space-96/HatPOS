@@ -10,6 +10,8 @@
 		C61C6424261F6D8600220911 /* Transactions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C61C6423261F6D8600220911 /* Transactions.swift */; };
 		C61C6427261F74C400220911 /* TransactionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C61C6426261F74C400220911 /* TransactionModel.swift */; };
 		C61C642A261F7DCC00220911 /* TransactionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C61C6429261F7DCC00220911 /* TransactionViewController.swift */; };
+		C668BCCD2626398E00987903 /* TransactionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C668BCCB2626398E00987903 /* TransactionCell.swift */; };
+		C668BCCE2626398E00987903 /* TransactionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C668BCCC2626398E00987903 /* TransactionCell.xib */; };
 		C6B9C89426018A1D00108B9C /* InventoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6B9C89226018A1D00108B9C /* InventoryCell.swift */; };
 		C6B9C89526018A1D00108B9C /* InventoryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C6B9C89326018A1D00108B9C /* InventoryCell.xib */; };
 		C6C9997725FA75F700C8ECC5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6C9997625FA75F700C8ECC5 /* AppDelegate.swift */; };
@@ -26,6 +28,8 @@
 		C61C6423261F6D8600220911 /* Transactions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Transactions.swift; sourceTree = "<group>"; };
 		C61C6426261F74C400220911 /* TransactionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionModel.swift; sourceTree = "<group>"; };
 		C61C6429261F7DCC00220911 /* TransactionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionViewController.swift; sourceTree = "<group>"; };
+		C668BCCB2626398E00987903 /* TransactionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionCell.swift; sourceTree = "<group>"; };
+		C668BCCC2626398E00987903 /* TransactionCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TransactionCell.xib; sourceTree = "<group>"; };
 		C6B9C89226018A1D00108B9C /* InventoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InventoryCell.swift; sourceTree = "<group>"; };
 		C6B9C89326018A1D00108B9C /* InventoryCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InventoryCell.xib; sourceTree = "<group>"; };
 		C6C9997325FA75F700C8ECC5 /* Hat POS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Hat POS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -77,13 +81,15 @@
 				C61C6429261F7DCC00220911 /* TransactionViewController.swift */,
 				C6B9C89226018A1D00108B9C /* InventoryCell.swift */,
 				C6B9C89326018A1D00108B9C /* InventoryCell.xib */,
-				C6C9998B25FBFD9000C8ECC5 /* HomeModel.swift */,
-				C61C6426261F74C400220911 /* TransactionModel.swift */,
 				C61C6423261F6D8600220911 /* Transactions.swift */,
 				C6C9998E25FBFE6A00C8ECC5 /* Inventory.swift */,
+				C6C9998B25FBFD9000C8ECC5 /* HomeModel.swift */,
+				C61C6426261F74C400220911 /* TransactionModel.swift */,
 				C6C9998425FA75F800C8ECC5 /* Info.plist */,
 				C6C9998125FA75F800C8ECC5 /* LaunchScreen.storyboard */,
 				C6C9997F25FA75F800C8ECC5 /* Assets.xcassets */,
+				C668BCCB2626398E00987903 /* TransactionCell.swift */,
+				C668BCCC2626398E00987903 /* TransactionCell.xib */,
 			);
 			path = "Hat POS";
 			sourceTree = "<group>";
@@ -149,6 +155,7 @@
 				C6C9998325FA75F800C8ECC5 /* LaunchScreen.storyboard in Resources */,
 				C6C9998025FA75F800C8ECC5 /* Assets.xcassets in Resources */,
 				C6C9997E25FA75F700C8ECC5 /* Main.storyboard in Resources */,
+				C668BCCE2626398E00987903 /* TransactionCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -167,6 +174,7 @@
 				C6B9C89426018A1D00108B9C /* InventoryCell.swift in Sources */,
 				C6C9998F25FBFE6A00C8ECC5 /* Inventory.swift in Sources */,
 				C6C9997725FA75F700C8ECC5 /* AppDelegate.swift in Sources */,
+				C668BCCD2626398E00987903 /* TransactionCell.swift in Sources */,
 				C6C9997925FA75F700C8ECC5 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
