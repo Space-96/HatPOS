@@ -321,6 +321,7 @@
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="664" id="CNo-GU-8mv"/>
                                                 </constraints>
+                                                <color key="sectionIndexBackgroundColor" red="0.27837252620000003" green="0.27830278870000003" blue="0.28655359149999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             </tableView>
                                         </subviews>
                                         <color key="backgroundColor" red="0.1921314895" green="0.19217148419999999" blue="0.19212898610000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
