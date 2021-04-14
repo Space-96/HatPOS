@@ -11,7 +11,8 @@ class TransactionViewController: UIViewController, TransactionModelDelegate, UIT
     
     @IBOutlet weak var tableView: UITableView!
     
-
+    @IBOutlet weak var Logo2: UIImageView!
+    
     
     var transactionModel = TransactionModel()
     var items = [Transactions]()
@@ -19,6 +20,8 @@ class TransactionViewController: UIViewController, TransactionModelDelegate, UIT
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        Logo2.layer.cornerRadius = 40
                 
         tableView.delegate = self
         tableView.dataSource = self
