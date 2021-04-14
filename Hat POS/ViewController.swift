@@ -15,11 +15,8 @@ class ViewController: UIViewController, HomeModelDelegate, UITableViewDataSource
     @IBOutlet weak var LogoutView: UIView!
     @IBOutlet weak var Logo: UIImageView!
     @IBOutlet weak var TransactionButtonView: UIView!
-    @IBAction func transactionButton() {
-        guard let vc = storyboard?.instantiateViewController(identifier: "transaction_vc") as? TransactionViewController else{
-            return
-        }
-        present(vc, animated: true)
+    @IBAction func transactionButton(_ sender: UIButton) {
+        performSegue(withIdentifier: "segueIdentifier", sender: self)
     }
     
     
@@ -73,7 +70,7 @@ class ViewController: UIViewController, HomeModelDelegate, UITableViewDataSource
         let cell = tableView.dequeueReusableCell(withIdentifier: "InvCell", for: indexPath) as! InventoryCell
         cell.idLabel.text = items[indexPath.row].productID
         cell.productNameLabel.text = items[indexPath.row].productName
-        cell.qtyLabel.text = items[indexPath.row].quantity
+        cell.qtyLabel?.text = items[indexPath.row].quantity
         cell.purchasePriceLabel.text = items[indexPath.row].unitPurchasePrice
         
         return cell

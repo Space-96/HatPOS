@@ -19,9 +19,7 @@ class TransactionViewController: UIViewController, TransactionModelDelegate, UIT
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        view.backgroundColor = .blue
-        
+                
         tableView.delegate = self
         tableView.dataSource = self
         
