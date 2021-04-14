@@ -19,7 +19,7 @@ class TransactionModel: NSObject {
 
     func getItems() {
         // Hit web service url
-        let serviceUrl = "http://student07.mssu.edu/serviceForTransactions.php"
+        let serviceUrl = "http://student07web.mssu.edu/serviceForTransactions.php"
         
         // Download the json data
         let url = URL(string: serviceUrl)
