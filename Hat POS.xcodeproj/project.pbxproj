@@ -24,6 +24,7 @@
 		C6C9998F25FBFE6A00C8ECC5 /* Inventory.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6C9998E25FBFE6A00C8ECC5 /* Inventory.swift */; };
 		D9F7EA2E263239F30005826D /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9F7EA2D263239F30005826D /* SignInViewController.swift */; };
 		D9F7EA3126323A090005826D /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9F7EA3026323A090005826D /* HomeViewController.swift */; };
+		D9F7EA3726335FE70005826D /* SignIn.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9F7EA3626335FE70005826D /* SignIn.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +47,7 @@
 		C6C9998E25FBFE6A00C8ECC5 /* Inventory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Inventory.swift; sourceTree = "<group>"; };
 		D9F7EA2D263239F30005826D /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 		D9F7EA3026323A090005826D /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		D9F7EA3626335FE70005826D /* SignIn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignIn.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +90,7 @@
 				C6B9C89226018A1D00108B9C /* InventoryCell.swift */,
 				C6B9C89326018A1D00108B9C /* InventoryCell.xib */,
 				C61C6423261F6D8600220911 /* Transactions.swift */,
+				D9F7EA3626335FE70005826D /* SignIn.swift */,
 				C6C9998E25FBFE6A00C8ECC5 /* Inventory.swift */,
 				C6C9998B25FBFD9000C8ECC5 /* HomeModel.swift */,
 				C61C6426261F74C400220911 /* TransactionModel.swift */,
@@ -173,6 +176,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D9F7EA2E263239F30005826D /* SignInViewController.swift in Sources */,
+				D9F7EA3726335FE70005826D /* SignIn.swift in Sources */,
 				C61C6427261F74C400220911 /* TransactionModel.swift in Sources */,
 				C6C9998C25FBFD9000C8ECC5 /* HomeModel.swift in Sources */,
 				C6C9997B25FA75F700C8ECC5 /* ProductViewController.swift in Sources */,
