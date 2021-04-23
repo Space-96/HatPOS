@@ -11,11 +11,12 @@ class SignInViewController: UIViewController {
 
     @IBOutlet var usernameText: UITextField!
     @IBOutlet var passwordText: UITextField!
+    @IBOutlet var logo: UIImageView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        logo.layer.cornerRadius = 40
     }
     
     @IBAction func loginButtonPressed(_ sender: UIButton) {

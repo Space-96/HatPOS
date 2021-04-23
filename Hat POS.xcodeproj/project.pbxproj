@@ -16,7 +16,7 @@
 		C6B9C89526018A1D00108B9C /* InventoryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C6B9C89326018A1D00108B9C /* InventoryCell.xib */; };
 		C6C9997725FA75F700C8ECC5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6C9997625FA75F700C8ECC5 /* AppDelegate.swift */; };
 		C6C9997925FA75F700C8ECC5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6C9997825FA75F700C8ECC5 /* SceneDelegate.swift */; };
-		C6C9997B25FA75F700C8ECC5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6C9997A25FA75F700C8ECC5 /* ViewController.swift */; };
+		C6C9997B25FA75F700C8ECC5 /* ProductViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6C9997A25FA75F700C8ECC5 /* ProductViewController.swift */; };
 		C6C9997E25FA75F700C8ECC5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C6C9997C25FA75F700C8ECC5 /* Main.storyboard */; };
 		C6C9998025FA75F800C8ECC5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C6C9997F25FA75F800C8ECC5 /* Assets.xcassets */; };
 		C6C9998325FA75F800C8ECC5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C6C9998125FA75F800C8ECC5 /* LaunchScreen.storyboard */; };
@@ -37,7 +37,7 @@
 		C6C9997325FA75F700C8ECC5 /* Hat POS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Hat POS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C6C9997625FA75F700C8ECC5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C6C9997825FA75F700C8ECC5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		C6C9997A25FA75F700C8ECC5 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		C6C9997A25FA75F700C8ECC5 /* ProductViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductViewController.swift; sourceTree = "<group>"; };
 		C6C9997D25FA75F700C8ECC5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C6C9997F25FA75F800C8ECC5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C6C9998225FA75F800C8ECC5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -83,7 +83,7 @@
 				C6C9997C25FA75F700C8ECC5 /* Main.storyboard */,
 				D9F7EA2D263239F30005826D /* SignInViewController.swift */,
 				D9F7EA3026323A090005826D /* HomeViewController.swift */,
-				C6C9997A25FA75F700C8ECC5 /* ViewController.swift */,
+				C6C9997A25FA75F700C8ECC5 /* ProductViewController.swift */,
 				C61C6429261F7DCC00220911 /* TransactionViewController.swift */,
 				C6B9C89226018A1D00108B9C /* InventoryCell.swift */,
 				C6B9C89326018A1D00108B9C /* InventoryCell.xib */,
@@ -175,7 +175,7 @@
 				D9F7EA2E263239F30005826D /* SignInViewController.swift in Sources */,
 				C61C6427261F74C400220911 /* TransactionModel.swift in Sources */,
 				C6C9998C25FBFD9000C8ECC5 /* HomeModel.swift in Sources */,
-				C6C9997B25FA75F700C8ECC5 /* ViewController.swift in Sources */,
+				C6C9997B25FA75F700C8ECC5 /* ProductViewController.swift in Sources */,
 				C61C6424261F6D8600220911 /* Transactions.swift in Sources */,
 				C61C642A261F7DCC00220911 /* TransactionViewController.swift in Sources */,
 				C6B9C89426018A1D00108B9C /* InventoryCell.swift in Sources */,

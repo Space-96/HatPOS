@@ -9,10 +9,12 @@ import UIKit
 
 class HomeViewController: UIViewController {
 
+    @IBOutlet var logo: UIImageView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        logo.layer.cornerRadius = 40
     }
     
 

@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ViewController: UIViewController, HomeModelDelegate, UITableViewDataSource, UITableViewDelegate {
+class ProductViewController: UIViewController, HomeModelDelegate, UITableViewDataSource, UITableViewDelegate {
     
     
     @IBOutlet weak var tableView: UITableView!
@@ -15,9 +15,6 @@ class ViewController: UIViewController, HomeModelDelegate, UITableViewDataSource
     @IBOutlet weak var LogoutView: UIView!
     @IBOutlet weak var Logo: UIImageView!
     @IBOutlet weak var TransactionButtonView: UIView!
-    @IBAction func transactionButton(_ sender: UIButton) {
-        performSegue(withIdentifier: "segueIdentifier", sender: self)
-    }
     
     
     var homeModel = HomeModel()
@@ -27,10 +24,10 @@ class ViewController: UIViewController, HomeModelDelegate, UITableViewDataSource
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        MainMenuView.layer.cornerRadius = 20
-        LogoutView.layer.cornerRadius = 20
+        //MainMenuView.layer.cornerRadius = 20
+        //LogoutView.layer.cornerRadius = 20
         Logo.layer.cornerRadius = 40
-        TransactionButtonView.layer.cornerRadius = 20
+        //TransactionButtonView.layer.cornerRadius = 20
         
         
         // Set self as the tableview's data source and delegate
