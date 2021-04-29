@@ -21,5 +21,9 @@ class HomeViewController: UIViewController {
     @IBAction func logOutButtonPressed(_ sender: UIButton) {
         self.performSegue(withIdentifier: "logout", sender: self)
     }
+    
+    @IBAction func unwindToHome(segue: UIStoryboardSegue) {
+        
+    }
 
 }

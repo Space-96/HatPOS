@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B53D3D35263B2D15009FA218 /* TimeTracking.swift in Sources */ = {isa = PBXBuildFile; fileRef = B53D3D34263B2D15009FA218 /* TimeTracking.swift */; };
 		C61C6424261F6D8600220911 /* Transactions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C61C6423261F6D8600220911 /* Transactions.swift */; };
 		C61C6427261F74C400220911 /* TransactionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C61C6426261F74C400220911 /* TransactionModel.swift */; };
 		C61C642A261F7DCC00220911 /* TransactionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C61C6429261F7DCC00220911 /* TransactionViewController.swift */; };
@@ -28,6 +29,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B53D3D34263B2D15009FA218 /* TimeTracking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeTracking.swift; sourceTree = "<group>"; };
 		C61C6423261F6D8600220911 /* Transactions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Transactions.swift; sourceTree = "<group>"; };
 		C61C6426261F74C400220911 /* TransactionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionModel.swift; sourceTree = "<group>"; };
 		C61C6429261F7DCC00220911 /* TransactionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionViewController.swift; sourceTree = "<group>"; };
@@ -83,6 +85,7 @@
 				C6C9997625FA75F700C8ECC5 /* AppDelegate.swift */,
 				C6C9997825FA75F700C8ECC5 /* SceneDelegate.swift */,
 				C6C9997C25FA75F700C8ECC5 /* Main.storyboard */,
+				B53D3D34263B2D15009FA218 /* TimeTracking.swift */,
 				D9F7EA2D263239F30005826D /* SignInViewController.swift */,
 				D9F7EA3026323A090005826D /* HomeViewController.swift */,
 				C6C9997A25FA75F700C8ECC5 /* ProductViewController.swift */,
@@ -180,6 +183,7 @@
 				C61C6427261F74C400220911 /* TransactionModel.swift in Sources */,
 				C6C9998C25FBFD9000C8ECC5 /* HomeModel.swift in Sources */,
 				C6C9997B25FA75F700C8ECC5 /* ProductViewController.swift in Sources */,
+				B53D3D35263B2D15009FA218 /* TimeTracking.swift in Sources */,
 				C61C6424261F6D8600220911 /* Transactions.swift in Sources */,
 				C61C642A261F7DCC00220911 /* TransactionViewController.swift in Sources */,
 				C6B9C89426018A1D00108B9C /* InventoryCell.swift in Sources */,
