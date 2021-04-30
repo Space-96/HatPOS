@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="MoL-Nk-Nnl">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="MoL-Nk-Nnl">
     <device id="ipad12_9" orientation="portrait" layout="fullscreen" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -137,9 +137,12 @@
                                                     <constraint firstAttribute="height" constant="75" id="Unx-Qq-5x9"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                                <state key="normal" title="Button">
+                                                <state key="normal" title="Delete">
                                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
+                                                <connections>
+                                                    <segue destination="YF5-FO-cqI" kind="show" id="MQR-Rm-fzG"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FBj-Yb-XI5">
                                                 <rect key="frame" x="505" y="0.0" width="200" height="75"/>
@@ -748,6 +751,344 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xiw-rf-Dky" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-779.296875" y="-12.298682284040995"/>
+        </scene>
+        <!--DeleteOptions-->
+        <scene sceneID="5eN-8g-Sgn">
+            <objects>
+                <viewController title="DeleteOptions" id="YF5-FO-cqI" customClass="DeleteOptionsViewController" customModule="Hat_POS" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="PZJ-aC-xCL">
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="1366"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="0_0" translatesAutoresizingMaskIntoConstraints="NO" id="j5O-3V-ktj" userLabel="Logo">
+                                <rect key="frame" x="60" y="110" width="220" height="172"/>
+                                <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Delete" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E6c-A9-6jV">
+                                <rect key="frame" x="410.5" y="110" width="203.5" height="90"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="91" id="ySh-ae-lYf"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="75"/>
+                                <color key="textColor" systemColor="systemTealColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="87" translatesAutoresizingMaskIntoConstraints="NO" id="EKJ-Fp-cL2">
+                                <rect key="frame" x="412" y="483.5" width="200" height="399"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="305" translatesAutoresizingMaskIntoConstraints="NO" id="AP0-o7-EgU">
+                                        <rect key="frame" x="0.0" y="0.0" width="200" height="75"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vzE-vN-y0x">
+                                                <rect key="frame" x="0.0" y="0.0" width="200" height="75"/>
+                                                <color key="backgroundColor" systemColor="systemYellowColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="75" id="pMy-2A-QPO"/>
+                                                    <constraint firstAttribute="width" constant="200" id="sFa-kj-il8"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                <state key="normal" title="Product">
+                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <segue destination="Vse-6C-LFw" kind="show" id="cp6-fN-sze"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="305" translatesAutoresizingMaskIntoConstraints="NO" id="V5j-I9-83q">
+                                        <rect key="frame" x="0.0" y="162" width="200" height="75"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9tR-si-Yha">
+                                                <rect key="frame" x="0.0" y="0.0" width="200" height="75"/>
+                                                <color key="backgroundColor" systemColor="systemTealColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="200" id="W3c-dT-xG7"/>
+                                                    <constraint firstAttribute="height" constant="75" id="qb8-Ih-z1M"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                <state key="normal" title="Transaction">
+                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <segue destination="aqw-i3-gsu" kind="show" id="Bcf-71-c5G"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="305" translatesAutoresizingMaskIntoConstraints="NO" id="cjV-51-6F1">
+                                        <rect key="frame" x="0.0" y="324" width="200" height="75"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qio-IA-u5w">
+                                                <rect key="frame" x="0.0" y="0.0" width="200" height="75"/>
+                                                <color key="backgroundColor" systemColor="systemYellowColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="75" id="5Od-l6-pbE"/>
+                                                    <constraint firstAttribute="width" constant="200" id="iv5-qv-z1K"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                <state key="normal" title="Time">
+                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <segue destination="p7q-yj-rUF" kind="show" id="hDr-gP-KG9"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="0HQ-k7-jsZ"/>
+                        <color key="backgroundColor" red="0.1921314895" green="0.19217148419999999" blue="0.19212898610000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="E6c-A9-6jV" firstAttribute="centerX" secondItem="PZJ-aC-xCL" secondAttribute="centerX" id="4pQ-6J-2X5"/>
+                            <constraint firstItem="EKJ-Fp-cL2" firstAttribute="centerY" secondItem="PZJ-aC-xCL" secondAttribute="centerY" id="7hJ-dt-Uf0"/>
+                            <constraint firstItem="j5O-3V-ktj" firstAttribute="top" secondItem="0HQ-k7-jsZ" secondAttribute="top" constant="60" id="Kua-fC-SOY"/>
+                            <constraint firstItem="EKJ-Fp-cL2" firstAttribute="centerX" secondItem="PZJ-aC-xCL" secondAttribute="centerX" id="YOt-4y-mH3"/>
+                            <constraint firstItem="E6c-A9-6jV" firstAttribute="top" secondItem="0HQ-k7-jsZ" secondAttribute="top" constant="60" id="eV0-0y-Omj"/>
+                            <constraint firstItem="j5O-3V-ktj" firstAttribute="leading" secondItem="0HQ-k7-jsZ" secondAttribute="leading" constant="60" id="xdn-NR-0Wr"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="ZDD-G1-v2M"/>
+                    <connections>
+                        <outlet property="logo" destination="j5O-3V-ktj" id="MT4-BW-TWP"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="les-7I-XXQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-55" y="745"/>
+        </scene>
+        <!--DeleteProduct-->
+        <scene sceneID="VFb-61-VTw">
+            <objects>
+                <viewController title="DeleteProduct" id="Vse-6C-LFw" customClass="DeleteProductViewController" customModule="Hat_POS" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="FGU-W0-P0r">
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="1366"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="0_0" translatesAutoresizingMaskIntoConstraints="NO" id="7Ac-3K-9gY" userLabel="Logo">
+                                <rect key="frame" x="60" y="110" width="220" height="172"/>
+                                <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Delete Product" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3yj-QL-sjN">
+                                <rect key="frame" x="324.5" y="110" width="375" height="72"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="91" id="oAy-3a-1TD"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="60"/>
+                                <color key="textColor" systemColor="systemTealColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="129" translatesAutoresizingMaskIntoConstraints="NO" id="iwV-zb-5oB">
+                                <rect key="frame" x="357" y="467" width="310.5" height="432.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter Product ID" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="edN-rb-r78">
+                                        <rect key="frame" x="0.0" y="0.0" width="310.5" height="54"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="45"/>
+                                        <color key="textColor" red="0.91764705879999997" green="0.6588235294" blue="0.1058823529" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Product ID" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2if-tP-PNA">
+                                        <rect key="frame" x="0.0" y="183" width="310" height="45.5"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="310" id="Xn4-ee-Cno"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q9f-4Y-7p4">
+                                        <rect key="frame" x="55" y="357.5" width="200" height="75"/>
+                                        <color key="backgroundColor" systemColor="systemYellowColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="200" id="7jq-fB-rm9"/>
+                                            <constraint firstAttribute="height" constant="75" id="sCQ-A9-DaI"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                        <state key="normal" title="Delete">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="deleteButtonPressed:" destination="Vse-6C-LFw" eventType="touchUpInside" id="Snb-tf-Kal"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="h1l-Z0-wvJ"/>
+                        <color key="backgroundColor" red="0.1921314895" green="0.19217148419999999" blue="0.19212898610000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="iwV-zb-5oB" firstAttribute="centerY" secondItem="FGU-W0-P0r" secondAttribute="centerY" id="RdK-Md-tkq"/>
+                            <constraint firstItem="3yj-QL-sjN" firstAttribute="centerX" secondItem="FGU-W0-P0r" secondAttribute="centerX" id="V7H-hy-Xv0"/>
+                            <constraint firstItem="7Ac-3K-9gY" firstAttribute="top" secondItem="h1l-Z0-wvJ" secondAttribute="top" constant="60" id="WYK-af-adB"/>
+                            <constraint firstItem="7Ac-3K-9gY" firstAttribute="leading" secondItem="h1l-Z0-wvJ" secondAttribute="leading" constant="60" id="XON-sJ-3DF"/>
+                            <constraint firstItem="iwV-zb-5oB" firstAttribute="centerX" secondItem="FGU-W0-P0r" secondAttribute="centerX" id="buH-NY-kOe"/>
+                            <constraint firstItem="3yj-QL-sjN" firstAttribute="top" secondItem="h1l-Z0-wvJ" secondAttribute="top" constant="60" id="vwP-16-AZU"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="wuu-bG-6ka"/>
+                    <connections>
+                        <outlet property="logo" destination="7Ac-3K-9gY" id="435-p5-MVE"/>
+                        <outlet property="productIDText" destination="2if-tP-PNA" id="suM-Dk-ba1"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="052-z0-d4i" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-779" y="1418"/>
+        </scene>
+        <!--DeleteTransaction-->
+        <scene sceneID="fFo-wR-MTa">
+            <objects>
+                <viewController title="DeleteTransaction" id="aqw-i3-gsu" customClass="DeleteTransactionViewController" customModule="Hat_POS" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="aMt-Za-L5O">
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="1366"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="0_0" translatesAutoresizingMaskIntoConstraints="NO" id="8eR-il-MfX" userLabel="Logo">
+                                <rect key="frame" x="60" y="110" width="220" height="172"/>
+                                <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Delete Transaction" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ie3-bC-LRe">
+                                <rect key="frame" x="315.5" y="110" width="393.5" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="91" id="PSe-03-qAN"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="50"/>
+                                <color key="textColor" systemColor="systemTealColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="129" translatesAutoresizingMaskIntoConstraints="NO" id="v15-8c-a9m">
+                                <rect key="frame" x="321" y="467" width="382" height="432.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter Transaction ID" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Odk-aE-Wx2">
+                                        <rect key="frame" x="0.0" y="0.0" width="382" height="54"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="45"/>
+                                        <color key="textColor" red="0.91764705879999997" green="0.6588235294" blue="0.1058823529" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Transaction ID" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="au8-O9-Gu4">
+                                        <rect key="frame" x="36" y="183" width="310" height="45.5"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="310" id="oKb-x5-61Q"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dRB-yM-zud">
+                                        <rect key="frame" x="91" y="357.5" width="200" height="75"/>
+                                        <color key="backgroundColor" systemColor="systemYellowColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="200" id="Q7T-tM-z1n"/>
+                                            <constraint firstAttribute="height" constant="75" id="wNq-hv-CIM"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                        <state key="normal" title="Delete">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="deleteButtonPressed:" destination="aqw-i3-gsu" eventType="touchUpInside" id="npf-ff-J5y"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="1JH-q0-QP3"/>
+                        <color key="backgroundColor" red="0.1921314895" green="0.19217148419999999" blue="0.19212898610000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="ie3-bC-LRe" firstAttribute="centerX" secondItem="aMt-Za-L5O" secondAttribute="centerX" id="Bql-mP-LWk"/>
+                            <constraint firstItem="ie3-bC-LRe" firstAttribute="top" secondItem="1JH-q0-QP3" secondAttribute="top" constant="60" id="Oyk-SL-8L5"/>
+                            <constraint firstItem="8eR-il-MfX" firstAttribute="leading" secondItem="1JH-q0-QP3" secondAttribute="leading" constant="60" id="aa9-2Y-9XK"/>
+                            <constraint firstItem="8eR-il-MfX" firstAttribute="top" secondItem="1JH-q0-QP3" secondAttribute="top" constant="60" id="ckd-Ox-FG5"/>
+                            <constraint firstItem="v15-8c-a9m" firstAttribute="centerX" secondItem="aMt-Za-L5O" secondAttribute="centerX" id="vF8-a7-391"/>
+                            <constraint firstItem="v15-8c-a9m" firstAttribute="centerY" secondItem="aMt-Za-L5O" secondAttribute="centerY" id="vwj-tp-AdD"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="eS9-bh-cPg"/>
+                    <connections>
+                        <outlet property="logo" destination="8eR-il-MfX" id="THO-iC-fiV"/>
+                        <outlet property="transactionIDText" destination="au8-O9-Gu4" id="cB6-3q-7sV"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Xns-mm-ykE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-18" y="1418"/>
+        </scene>
+        <!--DeleteTime-->
+        <scene sceneID="lfu-Ys-zoE">
+            <objects>
+                <viewController title="DeleteTime" id="p7q-yj-rUF" customClass="DeleteTimeViewController" customModule="Hat_POS" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="N33-pe-cfE">
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="1366"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="0_0" translatesAutoresizingMaskIntoConstraints="NO" id="hrf-XA-XYS" userLabel="Logo">
+                                <rect key="frame" x="60" y="110" width="220" height="172"/>
+                                <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Delete Time" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IXA-nR-UKv">
+                                <rect key="frame" x="361" y="110" width="302.5" height="72"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="91" id="Pki-qQ-8Am"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="60"/>
+                                <color key="textColor" systemColor="systemTealColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="129" translatesAutoresizingMaskIntoConstraints="NO" id="sWZ-51-tBS">
+                                <rect key="frame" x="320" y="467" width="384" height="432.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter Submission ID" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Plj-Jp-bzr">
+                                        <rect key="frame" x="0.0" y="0.0" width="384" height="54"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="45"/>
+                                        <color key="textColor" red="0.91764705879999997" green="0.6588235294" blue="0.1058823529" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Submission ID" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="XbX-Iq-TxV">
+                                        <rect key="frame" x="37" y="183" width="310" height="45.5"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="310" id="ik4-2A-5bK"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fje-eS-GoO">
+                                        <rect key="frame" x="92" y="357.5" width="200" height="75"/>
+                                        <color key="backgroundColor" systemColor="systemYellowColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="75" id="8EW-jk-kSN"/>
+                                            <constraint firstAttribute="width" constant="200" id="dG1-0A-xPn"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                        <state key="normal" title="Delete">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="deleteButtonPressed:" destination="p7q-yj-rUF" eventType="touchUpInside" id="6Rs-8x-7Yq"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="smL-48-eWD"/>
+                        <color key="backgroundColor" red="0.1921314895" green="0.19217148419999999" blue="0.19212898610000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="hrf-XA-XYS" firstAttribute="leading" secondItem="smL-48-eWD" secondAttribute="leading" constant="60" id="0AL-qd-jlv"/>
+                            <constraint firstItem="sWZ-51-tBS" firstAttribute="centerY" secondItem="N33-pe-cfE" secondAttribute="centerY" id="Ark-YL-krz"/>
+                            <constraint firstItem="IXA-nR-UKv" firstAttribute="top" secondItem="smL-48-eWD" secondAttribute="top" constant="60" id="Jem-9F-l25"/>
+                            <constraint firstItem="sWZ-51-tBS" firstAttribute="centerX" secondItem="N33-pe-cfE" secondAttribute="centerX" id="NgZ-d5-679"/>
+                            <constraint firstItem="IXA-nR-UKv" firstAttribute="centerX" secondItem="N33-pe-cfE" secondAttribute="centerX" id="Onl-Vs-iiv"/>
+                            <constraint firstItem="hrf-XA-XYS" firstAttribute="top" secondItem="smL-48-eWD" secondAttribute="top" constant="60" id="Z50-Ed-A2Z"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="4fK-mc-xGm"/>
+                    <connections>
+                        <outlet property="logo" destination="hrf-XA-XYS" id="FvM-e7-mOm"/>
+                        <outlet property="submissionIDText" destination="XbX-Iq-TxV" id="E3V-JR-Kiw"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bbY-wc-phG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="709" y="1418"/>
         </scene>
     </scenes>
     <resources>
