@@ -9,6 +9,7 @@ import Foundation
 
 struct Delete {
     
-    var rowCount = ""
+    var preCount = ""
+    var postCount = ""
     
 }

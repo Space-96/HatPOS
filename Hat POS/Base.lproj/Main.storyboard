@@ -914,10 +914,21 @@
                                     </button>
                                 </subviews>
                             </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QXU-XZ-0wX">
+                                <rect key="frame" x="387" y="427" width="250" height="0.0"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="250" id="OUz-dO-MBF"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <color key="textColor" red="0.91764705879999997" green="0.6588235294" blue="0.1058823529" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="h1l-Z0-wvJ"/>
                         <color key="backgroundColor" red="0.1921314895" green="0.19217148419999999" blue="0.19212898610000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="iwV-zb-5oB" firstAttribute="top" secondItem="QXU-XZ-0wX" secondAttribute="bottom" constant="40" id="3eJ-xN-8OR"/>
+                            <constraint firstItem="QXU-XZ-0wX" firstAttribute="centerX" secondItem="FGU-W0-P0r" secondAttribute="centerX" id="9VV-y1-dIv"/>
                             <constraint firstItem="iwV-zb-5oB" firstAttribute="centerY" secondItem="FGU-W0-P0r" secondAttribute="centerY" id="RdK-Md-tkq"/>
                             <constraint firstItem="3yj-QL-sjN" firstAttribute="centerX" secondItem="FGU-W0-P0r" secondAttribute="centerX" id="V7H-hy-Xv0"/>
                             <constraint firstItem="7Ac-3K-9gY" firstAttribute="top" secondItem="h1l-Z0-wvJ" secondAttribute="top" constant="60" id="WYK-af-adB"/>
@@ -930,6 +941,7 @@
                     <connections>
                         <outlet property="logo" destination="7Ac-3K-9gY" id="435-p5-MVE"/>
                         <outlet property="productIDText" destination="2if-tP-PNA" id="suM-Dk-ba1"/>
+                        <outlet property="statusMessage" destination="QXU-XZ-0wX" id="Fb8-c6-GgM"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="052-z0-d4i" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -991,6 +1003,16 @@
                                     </button>
                                 </subviews>
                             </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XY9-AH-XSh">
+                                <rect key="frame" x="387" y="427" width="250" height="0.0"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="250" id="A5g-9e-bEr"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="250" id="tON-4L-dJK"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <color key="textColor" red="0.91764705879999997" green="0.6588235294" blue="0.1058823529" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="1JH-q0-QP3"/>
                         <color key="backgroundColor" red="0.1921314895" green="0.19217148419999999" blue="0.19212898610000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -999,6 +1021,8 @@
                             <constraint firstItem="ie3-bC-LRe" firstAttribute="top" secondItem="1JH-q0-QP3" secondAttribute="top" constant="60" id="Oyk-SL-8L5"/>
                             <constraint firstItem="8eR-il-MfX" firstAttribute="leading" secondItem="1JH-q0-QP3" secondAttribute="leading" constant="60" id="aa9-2Y-9XK"/>
                             <constraint firstItem="8eR-il-MfX" firstAttribute="top" secondItem="1JH-q0-QP3" secondAttribute="top" constant="60" id="ckd-Ox-FG5"/>
+                            <constraint firstItem="XY9-AH-XSh" firstAttribute="centerX" secondItem="aMt-Za-L5O" secondAttribute="centerX" id="eV9-cw-rpE"/>
+                            <constraint firstItem="v15-8c-a9m" firstAttribute="top" secondItem="XY9-AH-XSh" secondAttribute="bottom" constant="40" id="fgS-J0-4KW"/>
                             <constraint firstItem="v15-8c-a9m" firstAttribute="centerX" secondItem="aMt-Za-L5O" secondAttribute="centerX" id="vF8-a7-391"/>
                             <constraint firstItem="v15-8c-a9m" firstAttribute="centerY" secondItem="aMt-Za-L5O" secondAttribute="centerY" id="vwj-tp-AdD"/>
                         </constraints>
@@ -1006,6 +1030,7 @@
                     <navigationItem key="navigationItem" id="eS9-bh-cPg"/>
                     <connections>
                         <outlet property="logo" destination="8eR-il-MfX" id="THO-iC-fiV"/>
+                        <outlet property="statusMessage" destination="XY9-AH-XSh" id="nGs-Vq-vC7"/>
                         <outlet property="transactionIDText" destination="au8-O9-Gu4" id="cB6-3q-7sV"/>
                     </connections>
                 </viewController>
@@ -1068,21 +1093,35 @@
                                     </button>
                                 </subviews>
                             </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kv7-KN-8Ug">
+                                <rect key="frame" x="387" y="427" width="250" height="0.0"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="250" id="FGB-7Q-5z6"/>
+                                    <constraint firstAttribute="width" relation="lessThanOrEqual" constant="250" id="K4Y-3v-IC1"/>
+                                    <constraint firstAttribute="width" constant="250" id="j9E-Hb-5SF"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <color key="textColor" red="0.91764705879999997" green="0.6588235294" blue="0.1058823529" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="smL-48-eWD"/>
                         <color key="backgroundColor" red="0.1921314895" green="0.19217148419999999" blue="0.19212898610000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="hrf-XA-XYS" firstAttribute="leading" secondItem="smL-48-eWD" secondAttribute="leading" constant="60" id="0AL-qd-jlv"/>
+                            <constraint firstItem="Kv7-KN-8Ug" firstAttribute="centerX" secondItem="N33-pe-cfE" secondAttribute="centerX" id="9ch-oW-d4B"/>
                             <constraint firstItem="sWZ-51-tBS" firstAttribute="centerY" secondItem="N33-pe-cfE" secondAttribute="centerY" id="Ark-YL-krz"/>
                             <constraint firstItem="IXA-nR-UKv" firstAttribute="top" secondItem="smL-48-eWD" secondAttribute="top" constant="60" id="Jem-9F-l25"/>
                             <constraint firstItem="sWZ-51-tBS" firstAttribute="centerX" secondItem="N33-pe-cfE" secondAttribute="centerX" id="NgZ-d5-679"/>
                             <constraint firstItem="IXA-nR-UKv" firstAttribute="centerX" secondItem="N33-pe-cfE" secondAttribute="centerX" id="Onl-Vs-iiv"/>
+                            <constraint firstItem="sWZ-51-tBS" firstAttribute="top" secondItem="Kv7-KN-8Ug" secondAttribute="bottom" constant="40" id="PaV-gd-rJI"/>
                             <constraint firstItem="hrf-XA-XYS" firstAttribute="top" secondItem="smL-48-eWD" secondAttribute="top" constant="60" id="Z50-Ed-A2Z"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="4fK-mc-xGm"/>
                     <connections>
                         <outlet property="logo" destination="hrf-XA-XYS" id="FvM-e7-mOm"/>
+                        <outlet property="statusMessage" destination="Kv7-KN-8Ug" id="7u7-2S-F9n"/>
                         <outlet property="submissionIDText" destination="XbX-Iq-TxV" id="E3V-JR-Kiw"/>
                     </connections>
                 </viewController>

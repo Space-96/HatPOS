@@ -11,9 +11,9 @@ class DeleteProductViewController: UIViewController {
 
     @IBOutlet var logo: UIImageView!
     @IBOutlet var productIDText: UITextField!
+    @IBOutlet var statusMessage: UILabel!
     
     var productID : String?
-    //var count = [Delete]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,31 +33,40 @@ class DeleteProductViewController: UIViewController {
                         print(error!)
                         return
                     }
-//                    else {
-//                        //self.parseJson(data!)
-//                        print("Deleted")
-//                    }
+                    else {
+                        self.parseJson(data!)
+                    }
                 })
                 task.resume()
             }
     }
-//
-//    func parseJson(_ data:Data) {
-//        do {
-//            let jsonArray = try JSONSerialization.jsonObject(with: data, options: []) as! [Any]
-//            if jsonArray.isEmpty {
-//                print("Empty Json")
-//            }
-//            for jsonResult in jsonArray {
-//                let jsonDict = jsonResult as! [String:String]
-//                let product = Delete(rowCount: jsonDict["COUNt(*)"]!)
-//                print(product.rowCount)
-//                count.append(product)
-//            }
-//
-//        } catch  {
-//            print("JSON Parse Error")
-//        }
-//    }
+
+    func parseJson(_ data:Data) {
+        var jsonDict = [String:String]()
+        do {
+            let jsonArray = try JSONSerialization.jsonObject(with: data, options: []) as! [Any]
+            if jsonArray.isEmpty {
+                print("Empty Json")
+            }
+            for jsonResult in jsonArray {
+                jsonDict.merge(jsonResult as! [String:String]) { (current, _) in current }
+            }
+            let product = Delete(preCount: jsonDict["preCount"]!, postCount: jsonDict["postCount"]!)
+            validateDelete(product.preCount, product.postCount)
+        } catch  {
+            print("JSON Parse Error")
+        }
+    }
     
+    func validateDelete(_ before: String, _ after: String) {
+        if Int(before) == Int(after) {
+            DispatchQueue.main.async {
+                self.statusMessage.text = "Delete Failed"
+            }
+        } else {
+            DispatchQueue.main.async {
+                self.statusMessage.text = "Delete Successful"
+            }
+        }
+    }
 }
