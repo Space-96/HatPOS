@@ -22,6 +22,11 @@
 		C6C9998325FA75F800C8ECC5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C6C9998125FA75F800C8ECC5 /* LaunchScreen.storyboard */; };
 		C6C9998C25FBFD9000C8ECC5 /* HomeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6C9998B25FBFD9000C8ECC5 /* HomeModel.swift */; };
 		C6C9998F25FBFE6A00C8ECC5 /* Inventory.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6C9998E25FBFE6A00C8ECC5 /* Inventory.swift */; };
+		D9BB6751263B7217005CE4EC /* DeleteOptionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9BB6750263B7217005CE4EC /* DeleteOptionsViewController.swift */; };
+		D9BB6753263B729B005CE4EC /* DeleteProductViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9BB6752263B729B005CE4EC /* DeleteProductViewController.swift */; };
+		D9BB6755263B72AE005CE4EC /* DeleteTransactionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9BB6754263B72AE005CE4EC /* DeleteTransactionViewController.swift */; };
+		D9BB6757263B72B9005CE4EC /* DeleteTimeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9BB6756263B72B9005CE4EC /* DeleteTimeViewController.swift */; };
+		D9BB675B263B7824005CE4EC /* Delete.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9BB675A263B7824005CE4EC /* Delete.swift */; };
 		D9F7EA2E263239F30005826D /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9F7EA2D263239F30005826D /* SignInViewController.swift */; };
 		D9F7EA3126323A090005826D /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9F7EA3026323A090005826D /* HomeViewController.swift */; };
 		D9F7EA3726335FE70005826D /* SignIn.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9F7EA3626335FE70005826D /* SignIn.swift */; };
@@ -45,6 +50,11 @@
 		C6C9998425FA75F800C8ECC5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C6C9998B25FBFD9000C8ECC5 /* HomeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeModel.swift; sourceTree = "<group>"; };
 		C6C9998E25FBFE6A00C8ECC5 /* Inventory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Inventory.swift; sourceTree = "<group>"; };
+		D9BB6750263B7217005CE4EC /* DeleteOptionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteOptionsViewController.swift; sourceTree = "<group>"; };
+		D9BB6752263B729B005CE4EC /* DeleteProductViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteProductViewController.swift; sourceTree = "<group>"; };
+		D9BB6754263B72AE005CE4EC /* DeleteTransactionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteTransactionViewController.swift; sourceTree = "<group>"; };
+		D9BB6756263B72B9005CE4EC /* DeleteTimeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteTimeViewController.swift; sourceTree = "<group>"; };
+		D9BB675A263B7824005CE4EC /* Delete.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Delete.swift; path = "Hat POS/SignIn/Delete.swift"; sourceTree = SOURCE_ROOT; };
 		D9F7EA2D263239F30005826D /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 		D9F7EA3026323A090005826D /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		D9F7EA3626335FE70005826D /* SignIn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignIn.swift; sourceTree = "<group>"; };
@@ -83,14 +93,14 @@
 				C6C9997625FA75F700C8ECC5 /* AppDelegate.swift */,
 				C6C9997825FA75F700C8ECC5 /* SceneDelegate.swift */,
 				C6C9997C25FA75F700C8ECC5 /* Main.storyboard */,
-				D9F7EA2D263239F30005826D /* SignInViewController.swift */,
 				D9F7EA3026323A090005826D /* HomeViewController.swift */,
+				D9BB6758263B7529005CE4EC /* Delete */,
+				D9BB6759263B7563005CE4EC /* SignIn */,
 				C6C9997A25FA75F700C8ECC5 /* ProductViewController.swift */,
 				C61C6429261F7DCC00220911 /* TransactionViewController.swift */,
 				C6B9C89226018A1D00108B9C /* InventoryCell.swift */,
 				C6B9C89326018A1D00108B9C /* InventoryCell.xib */,
 				C61C6423261F6D8600220911 /* Transactions.swift */,
-				D9F7EA3626335FE70005826D /* SignIn.swift */,
 				C6C9998E25FBFE6A00C8ECC5 /* Inventory.swift */,
 				C6C9998B25FBFD9000C8ECC5 /* HomeModel.swift */,
 				C61C6426261F74C400220911 /* TransactionModel.swift */,
@@ -101,6 +111,27 @@
 				C668BCCC2626398E00987903 /* TransactionCell.xib */,
 			);
 			path = "Hat POS";
+			sourceTree = "<group>";
+		};
+		D9BB6758263B7529005CE4EC /* Delete */ = {
+			isa = PBXGroup;
+			children = (
+				D9BB675A263B7824005CE4EC /* Delete.swift */,
+				D9BB6750263B7217005CE4EC /* DeleteOptionsViewController.swift */,
+				D9BB6752263B729B005CE4EC /* DeleteProductViewController.swift */,
+				D9BB6756263B72B9005CE4EC /* DeleteTimeViewController.swift */,
+				D9BB6754263B72AE005CE4EC /* DeleteTransactionViewController.swift */,
+			);
+			path = Delete;
+			sourceTree = "<group>";
+		};
+		D9BB6759263B7563005CE4EC /* SignIn */ = {
+			isa = PBXGroup;
+			children = (
+				D9F7EA2D263239F30005826D /* SignInViewController.swift */,
+				D9F7EA3626335FE70005826D /* SignIn.swift */,
+			);
+			path = SignIn;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -183,9 +214,14 @@
 				C61C6424261F6D8600220911 /* Transactions.swift in Sources */,
 				C61C642A261F7DCC00220911 /* TransactionViewController.swift in Sources */,
 				C6B9C89426018A1D00108B9C /* InventoryCell.swift in Sources */,
+				D9BB6755263B72AE005CE4EC /* DeleteTransactionViewController.swift in Sources */,
+				D9BB6751263B7217005CE4EC /* DeleteOptionsViewController.swift in Sources */,
 				C6C9998F25FBFE6A00C8ECC5 /* Inventory.swift in Sources */,
 				C6C9997725FA75F700C8ECC5 /* AppDelegate.swift in Sources */,
+				D9BB675B263B7824005CE4EC /* Delete.swift in Sources */,
+				D9BB6757263B72B9005CE4EC /* DeleteTimeViewController.swift in Sources */,
 				C668BCCD2626398E00987903 /* TransactionCell.swift in Sources */,
+				D9BB6753263B729B005CE4EC /* DeleteProductViewController.swift in Sources */,
 				C6C9997925FA75F700C8ECC5 /* SceneDelegate.swift in Sources */,
 				D9F7EA3126323A090005826D /* HomeViewController.swift in Sources */,
 			);
