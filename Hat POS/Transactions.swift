@@ -13,9 +13,11 @@ struct Transactions {
     var employeeID = ""
     var customerID = ""
     var productID = ""
-    var date = ""
+    var dateAndTime = ""
     var subTotal = ""
     var tax = ""
     var total = ""
     
 }
+var transactionItems : [Transactions] = []
+var filteredTransactions : [Transactions] = []
