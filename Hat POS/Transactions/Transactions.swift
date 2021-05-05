@@ -19,3 +19,6 @@ struct Transactions {
     var total = ""
     
 }
+
+var transactionItems : [Transactions] = []
+var filteredTransactions : [Transactions] = []
