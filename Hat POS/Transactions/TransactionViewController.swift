@@ -7,12 +7,13 @@
 
 import UIKit
 
-class TransactionViewController: UIViewController, TransactionModelDelegate, UITableViewDataSource, UITableViewDelegate {
+class TransactionViewController: UIViewController, TransactionModelDelegate, UITableViewDataSource, UITableViewDelegate, UISearchBarDelegate, UISearchResultsUpdating, UISearchControllerDelegate {
     
     @IBOutlet weak var tableView: UITableView!
     
     @IBOutlet weak var Logo2: UIImageView!
     
+    @IBOutlet weak var searchContainer: UIView!
     
     var transactionModel = TransactionModel()
     var items = [Transactions]()
@@ -31,12 +32,38 @@ class TransactionViewController: UIViewController, TransactionModelDelegate, UIT
         //Initiate calling the items download
         transactionModel.getItems()
         transactionModel.delegate = self
+        searchController = ({
+                    let controller = UISearchController(searchResultsController: nil)
+                    controller.searchBar.frame = CGRect(x: 0, y: 0, width: 242, height: 44)
+                    controller.searchResultsUpdater = self
+                    controller.searchBar.becomeFirstResponder()
+                    controller.searchBar.delegate = self
+                    controller.delegate = self
+                    controller.searchBar.sizeToFit()
+                    controller.searchBar.showsCancelButton = false
+                    controller.searchBar.tintColor =  #colorLiteral(red: 0.2392156869, green: 0.6745098233, blue: 0.9686274529, alpha: 1)
+                    controller.searchBar.barTintColor =  #colorLiteral(red: 0.2392156869, green: 0.6745098233, blue: 0.9686274529, alpha: 1)
+                    controller.searchBar.placeholder = "Search transaction list.."
+                    searchContainer.addSubview(controller.searchBar)
+                      
+                    return controller
+                  })()
+
         
         let nib = UINib(nibName: "TransactionCell", bundle: nil)
         self.tableView.register(nib, forCellReuseIdentifier: "TranCell")
         self.tableView.rowHeight = UITableView.automaticDimension
         
     }
+    //These two functions adjust size and cancel button when search is being used or dismissed
+        func didPresentSearchController(_ searchController: UISearchController) {
+            searchController.searchBar.frame = CGRect(x: 0, y: 0, width: 242, height: 44.0)
+            searchController.searchBar.showsCancelButton = true
+        }
+        func didDismissSearchController(_ searchController: UISearchController) {
+            searchController.searchBar.frame = CGRect(x: 0, y: 0, width: 242, height: 44.0)
+            searchController.searchBar.showsCancelButton = false
+        }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -46,6 +73,7 @@ class TransactionViewController: UIViewController, TransactionModelDelegate, UIT
     func transactionItemsDownloaded(transactionItems: [Transactions]) {
         
         self.items = transactionItems
+        self.filteredTransactions = transactionItems
         
         DispatchQueue.main.async{
             self.tableView.reloadData()
@@ -53,22 +81,41 @@ class TransactionViewController: UIViewController, TransactionModelDelegate, UIT
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return items.count
+        return filteredTransactions.count
     }
     func tableView(_  tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "TranCell", for: indexPath) as! TransactionCell
         
-        cell.tIDLabel.text = items[indexPath.row].transactionID
-        cell.eIDLabel.text = items[indexPath.row].employeeID
-        cell.cIDLabel.text = items[indexPath.row].customerID
-        cell.pIDLabel.text = items[indexPath.row].productID
-        cell.dateLabel.text = items[indexPath.row].date
-        cell.subTotalLabel.text = items[indexPath.row].subTotal
-        cell.taxLabel.text = items[indexPath.row].tax
-        cell.totalLabel.text = items[indexPath.row].total
+        cell.tIDLabel.text = filteredTransactions[indexPath.row].transactionID
+        cell.eIDLabel.text = filteredTransactions[indexPath.row].employeeID
+        cell.cIDLabel.text = filteredTransactions[indexPath.row].customerID
+        cell.pIDLabel.text = filteredTransactions[indexPath.row].productID
+        cell.dateLabel.text = filteredTransactions[indexPath.row].date
+        cell.subTotalLabel.text = filteredTransactions[indexPath.row].subTotal
+        cell.taxLabel.text = filteredTransactions[indexPath.row].tax
+        cell.totalLabel.text = filteredTransactions[indexPath.row].total
         
         return cell
     }
+    //MARK: - Search Bar function
+       func updateSearchResults(for searchController: UISearchController) {
+           
+           if let searchTerm = searchController.searchBar.text, !searchTerm.isEmpty {
+               filteredTransactions = items.filter { result in return result.transactionID.contains(searchTerm) ||
+               result.customerID.contains(searchTerm) ||
+               result.employeeID.contains(searchTerm) ||
+               result.productID.contains(searchTerm)
+           }
+           }
+           else
+           {
+               filteredTransactions = items
+               
+           }
+           
+           self.tableView.reloadData()
+       }
+
     
 }
