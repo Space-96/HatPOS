@@ -71,6 +71,53 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C6BA4AB526431716000B00B7 /* ProductInventory */ = {
+			isa = PBXGroup;
+			children = (
+				C6C9997A25FA75F700C8ECC5 /* ProductViewController.swift */,
+				C6C9998E25FBFE6A00C8ECC5 /* Inventory.swift */,
+				C6C9998B25FBFD9000C8ECC5 /* HomeModel.swift */,
+			);
+			path = ProductInventory;
+			sourceTree = "<group>";
+		};
+		C6BA4AB6264317F3000B00B7 /* TransactionCell */ = {
+			isa = PBXGroup;
+			children = (
+				C668BCCB2626398E00987903 /* TransactionCell.swift */,
+				C668BCCC2626398E00987903 /* TransactionCell.xib */,
+			);
+			path = TransactionCell;
+			sourceTree = "<group>";
+		};
+		C6BA4AB726431817000B00B7 /* CustomTableCells */ = {
+			isa = PBXGroup;
+			children = (
+				C6BA4AB82643184B000B00B7 /* InventoryCell */,
+				C6BA4AB6264317F3000B00B7 /* TransactionCell */,
+			);
+			path = CustomTableCells;
+			sourceTree = "<group>";
+		};
+		C6BA4AB82643184B000B00B7 /* InventoryCell */ = {
+			isa = PBXGroup;
+			children = (
+				C6B9C89326018A1D00108B9C /* InventoryCell.xib */,
+				C6B9C89226018A1D00108B9C /* InventoryCell.swift */,
+			);
+			path = InventoryCell;
+			sourceTree = "<group>";
+		};
+		C6BA4AB92643186C000B00B7 /* Transactions */ = {
+			isa = PBXGroup;
+			children = (
+				C61C6429261F7DCC00220911 /* TransactionViewController.swift */,
+				C61C6423261F6D8600220911 /* Transactions.swift */,
+				C61C6426261F74C400220911 /* TransactionModel.swift */,
+			);
+			path = Transactions;
+			sourceTree = "<group>";
+		};
 		C6C9996A25FA75F700C8ECC5 = {
 			isa = PBXGroup;
 			children = (
@@ -96,19 +143,12 @@
 				D9F7EA3026323A090005826D /* HomeViewController.swift */,
 				D9BB6758263B7529005CE4EC /* Delete */,
 				D9BB6759263B7563005CE4EC /* SignIn */,
-				C6C9997A25FA75F700C8ECC5 /* ProductViewController.swift */,
-				C61C6429261F7DCC00220911 /* TransactionViewController.swift */,
-				C6B9C89226018A1D00108B9C /* InventoryCell.swift */,
-				C6B9C89326018A1D00108B9C /* InventoryCell.xib */,
-				C61C6423261F6D8600220911 /* Transactions.swift */,
-				C6C9998E25FBFE6A00C8ECC5 /* Inventory.swift */,
-				C6C9998B25FBFD9000C8ECC5 /* HomeModel.swift */,
-				C61C6426261F74C400220911 /* TransactionModel.swift */,
+				C6BA4AB526431716000B00B7 /* ProductInventory */,
+				C6BA4AB92643186C000B00B7 /* Transactions */,
+				C6BA4AB726431817000B00B7 /* CustomTableCells */,
 				C6C9998425FA75F800C8ECC5 /* Info.plist */,
 				C6C9998125FA75F800C8ECC5 /* LaunchScreen.storyboard */,
 				C6C9997F25FA75F800C8ECC5 /* Assets.xcassets */,
-				C668BCCB2626398E00987903 /* TransactionCell.swift */,
-				C668BCCC2626398E00987903 /* TransactionCell.xib */,
 			);
 			path = "Hat POS";
 			sourceTree = "<group>";

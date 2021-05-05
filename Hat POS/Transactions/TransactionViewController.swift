@@ -16,6 +16,8 @@ class TransactionViewController: UIViewController, TransactionModelDelegate, UIT
     
     var transactionModel = TransactionModel()
     var items = [Transactions]()
+    var filteredTransactions = [Transactions]()
+    var searchController = UISearchController()
     
     
     override func viewDidLoad() {
