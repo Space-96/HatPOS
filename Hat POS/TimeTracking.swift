@@ -13,7 +13,15 @@ class TimeTracking: UIViewController{
     @IBOutlet var tableView: UITableView!
     
     var items = [TimeTrackingValuse]()
-    
+
+    struct TimeTrackingValuse {
+        var submissionID = "submissionID test"
+        var firstName = ""
+        var lastName = ""
+        var clocking = ""
+        var dateAndTime = ""
+    }
+
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -32,44 +40,43 @@ class TimeTracking: UIViewController{
                     return
                 }
                 else {
-                    parseJson(data!)
+                    self.parseJson(data!)
                 }
             })
             task.resume()
         }
     }
+    
 
-}
-
-struct TimeTrackingValuse {
-    var submissionID = "submissionID test"
-    var firstName = ""
-    var lastName = ""
-    var clocking = ""
-    var dateAndTime = ""
-}
-
-func parseJson(_ data:Data) {
-    do {
-        let jsonArray = try JSONSerialization.jsonObject(with: data, options: []) as! [Any]
-        if jsonArray.isEmpty {
-            print("jsonArry returned Empty for some reason")
+    func parseJson(_ data:Data) {
+        var timeArray = [TimeTrackingValuse]()
+        do {
+            let jsonArray = try JSONSerialization.jsonObject(with: data, options: []) as! [Any]
+            if jsonArray.isEmpty {
+                print("jsonArry returned Empty for some reason")
+            }
+            for jsonResult in jsonArray {
+                let jsonDict = jsonResult as! [String:String]
+                let submission = TimeTrackingValuse(submissionID: jsonDict["submissionID"]!, firstName: jsonDict["firstName"]!, lastName: jsonDict["lastName"]!, clocking: jsonDict["clocking"]!, dateAndTime: jsonDict["dateAndTime"]!)
+                timeArray.append(submission)
+                //print(jsonResult)
+            }
+            itemsDownloaded(timeTrackingItems: timeArray)
+            
+        } catch  {
+            print("JSON Parse Error for some reason")
         }
-        for jsonResult in jsonArray {
-            print(jsonResult)
-        }
-        
-    } catch  {
-        print("JSON Parse Error for some reason")
     }
-}
 
-//func itemsDownloaded(timeTrackingItems: [Inventory]) {
-//    self.items = timeTrackingItems
-//    DispatchQueue.main.async {
-//        tableView.reloadData
-//    }
-//}
+    func itemsDownloaded(timeTrackingItems: [TimeTrackingValuse]) {
+        print(timeTrackingItems)
+        items = timeTrackingItems
+        DispatchQueue.main.async {
+            self.tableView.reloadData()
+        }
+    }
+
+}
 
 extension TimeTracking: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
@@ -95,6 +102,4 @@ extension TimeTracking: UITableViewDataSource {
         
         return cell
     }
-    
 }
-
