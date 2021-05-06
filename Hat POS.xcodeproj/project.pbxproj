@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B5430FFF264430340056EB9C /* TimeTracking.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5430FFE264430340056EB9C /* TimeTracking.swift */; };
 		C61C6424261F6D8600220911 /* Transactions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C61C6423261F6D8600220911 /* Transactions.swift */; };
 		C61C6427261F74C400220911 /* TransactionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C61C6426261F74C400220911 /* TransactionModel.swift */; };
 		C61C642A261F7DCC00220911 /* TransactionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C61C6429261F7DCC00220911 /* TransactionViewController.swift */; };
@@ -33,6 +34,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B5430FFE264430340056EB9C /* TimeTracking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeTracking.swift; sourceTree = "<group>"; };
 		C61C6423261F6D8600220911 /* Transactions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Transactions.swift; sourceTree = "<group>"; };
 		C61C6426261F74C400220911 /* TransactionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionModel.swift; sourceTree = "<group>"; };
 		C61C6429261F7DCC00220911 /* TransactionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionViewController.swift; sourceTree = "<group>"; };
@@ -71,6 +73,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B54310002644305E0056EB9C /* TimeTracking */ = {
+			isa = PBXGroup;
+			children = (
+				B5430FFE264430340056EB9C /* TimeTracking.swift */,
+			);
+			name = TimeTracking;
+			sourceTree = "<group>";
+		};
 		C6BA4AB526431716000B00B7 /* ProductInventory */ = {
 			isa = PBXGroup;
 			children = (
@@ -137,6 +147,7 @@
 		C6C9997525FA75F700C8ECC5 /* Hat POS */ = {
 			isa = PBXGroup;
 			children = (
+				B54310002644305E0056EB9C /* TimeTracking */,
 				C6C9997625FA75F700C8ECC5 /* AppDelegate.swift */,
 				C6C9997825FA75F700C8ECC5 /* SceneDelegate.swift */,
 				C6C9997C25FA75F700C8ECC5 /* Main.storyboard */,
@@ -259,6 +270,7 @@
 				C6C9998F25FBFE6A00C8ECC5 /* Inventory.swift in Sources */,
 				C6C9997725FA75F700C8ECC5 /* AppDelegate.swift in Sources */,
 				D9BB675B263B7824005CE4EC /* Delete.swift in Sources */,
+				B5430FFF264430340056EB9C /* TimeTracking.swift in Sources */,
 				D9BB6757263B72B9005CE4EC /* DeleteTimeViewController.swift in Sources */,
 				C668BCCD2626398E00987903 /* TransactionCell.swift in Sources */,
 				D9BB6753263B729B005CE4EC /* DeleteProductViewController.swift in Sources */,
