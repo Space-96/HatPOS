@@ -12,8 +12,17 @@ class TimeTracking: UIViewController{
     @IBOutlet var logo: UIImageView!
     @IBOutlet var tableView: UITableView!
     
+
     var items = [TimeTrackingValuse]()
-    
+
+    struct TimeTrackingValuse {
+        var submissionID = "submissionID test"
+        var firstName = ""
+        var lastName = ""
+        var clocking = ""
+        var dateAndTime = ""
+    }
+
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -21,6 +30,9 @@ class TimeTracking: UIViewController{
         
         tableView.delegate = self
         tableView.dataSource = self
+        
+        let nib = UINib(nibName: "timeCellAlt", bundle: nil)
+        self.tableView.register(nib, forCellReuseIdentifier: "timeCellAlt")
         
         let stringURL = "http://student07web.mssu.edu/serviceForTimeTracking.php"
         
@@ -32,44 +44,42 @@ class TimeTracking: UIViewController{
                     return
                 }
                 else {
-                    parseJson(data!)
+                    self.parseJson(data!)
                 }
             })
             task.resume()
         }
     }
 
-}
-
-struct TimeTrackingValuse {
-    var submissionID = "submissionID test"
-    var firstName = ""
-    var lastName = ""
-    var clocking = ""
-    var dateAndTime = ""
-}
-
-func parseJson(_ data:Data) {
-    do {
-        let jsonArray = try JSONSerialization.jsonObject(with: data, options: []) as! [Any]
-        if jsonArray.isEmpty {
-            print("jsonArry returned Empty for some reason")
+    func parseJson(_ data:Data) {
+        var timeArray = [TimeTrackingValuse]()
+        do {
+            let jsonArray = try JSONSerialization.jsonObject(with: data, options: []) as! [Any]
+            if jsonArray.isEmpty {
+                print("jsonArry returned Empty for some reason")
+            }
+            for jsonResult in jsonArray {
+                let jsonDict = jsonResult as! [String:String]
+                let submission = TimeTrackingValuse(submissionID: jsonDict["submissionID"]!, firstName: jsonDict["firstName"]!, lastName: jsonDict["lastName"]!, clocking: jsonDict["clocking"]!, dateAndTime: jsonDict["dateAndTime"]!)
+                timeArray.append(submission)
+                //print(jsonResult)
+            }
+            itemsDownloaded(timeTrackingItems: timeArray)
+            
+        } catch  {
+            print("JSON Parse Error for some reason")
         }
-        for jsonResult in jsonArray {
-            print(jsonResult)
-        }
-        
-    } catch  {
-        print("JSON Parse Error for some reason")
     }
-}
 
-//func itemsDownloaded(timeTrackingItems: [Inventory]) {
-//    self.items = timeTrackingItems
-//    DispatchQueue.main.async {
-//        tableView.reloadData
-//    }
-//}
+    func itemsDownloaded(timeTrackingItems: [TimeTrackingValuse]) {
+        print(timeTrackingItems)
+        items = timeTrackingItems
+        DispatchQueue.main.async {
+            self.tableView.reloadData()
+        }
+    }
+
+}
 
 extension TimeTracking: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
@@ -89,12 +99,14 @@ extension TimeTracking: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: "timeCell", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "TimeTrackingIDFlyer", for: indexPath) //as! TimeTrackingCell
         
         cell.textLabel?.text = items[indexPath.row].submissionID
+        //cell.idLabel.text = items[indexPath.row].firstName
+        //cell.productNameLabel.text = items[indexPath.row].lastName
+        //cell.NO1.text = items[indexPath.row].firstName
+        //cell.NO2.text = items[indexPath.row].lastName
         
         return cell
     }
-    
 }
-

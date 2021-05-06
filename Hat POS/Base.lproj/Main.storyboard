@@ -202,10 +202,10 @@
                                     <constraint firstAttribute="width" constant="878" id="yFi-hu-ZuG"/>
                                 </constraints>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="timeCell" id="Qf8-f1-S9U">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="TimeTrackingIDFlyer" id="GWc-gc-6u9">
                                         <rect key="frame" x="0.0" y="28" width="878" height="43.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Qf8-f1-S9U" id="oF8-Rz-jgs">
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="GWc-gc-6u9" id="JB6-eg-umZ">
                                             <rect key="frame" x="0.0" y="0.0" width="878" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
@@ -215,10 +215,27 @@
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="0_0" translatesAutoresizingMaskIntoConstraints="NO" id="eeb-SD-iWT">
                                 <rect key="frame" x="73" y="90" width="186" height="138"/>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IWg-bI-EzL">
+                                <rect key="frame" x="412" y="1211" width="200" height="75"/>
+                                <color key="backgroundColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="75" id="Dyp-J0-pMH"/>
+                                    <constraint firstAttribute="width" constant="200" id="dZv-Ek-edc"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="27"/>
+                                <state key="normal" title="Delete">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                </state>
+                                <connections>
+                                    <segue destination="p7q-yj-rUF" kind="show" id="8m7-LI-ggu"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="lgf-gX-mjy" firstAttribute="centerY" secondItem="xfk-5r-SpP" secondAttribute="centerY" id="6R3-En-Rb4"/>
+                            <constraint firstItem="2gu-tB-BwZ" firstAttribute="bottom" secondItem="IWg-bI-EzL" secondAttribute="bottom" constant="80" id="Wga-LU-r3g"/>
+                            <constraint firstItem="IWg-bI-EzL" firstAttribute="centerX" secondItem="xfk-5r-SpP" secondAttribute="centerX" id="cmD-gy-bfO"/>
                             <constraint firstItem="lgf-gX-mjy" firstAttribute="centerX" secondItem="xfk-5r-SpP" secondAttribute="centerX" id="eRg-vZ-bSz"/>
                             <constraint firstItem="eeb-SD-iWT" firstAttribute="leading" secondItem="2gu-tB-BwZ" secondAttribute="leading" constant="73" id="mXg-lZ-CbA"/>
                             <constraint firstItem="eeb-SD-iWT" firstAttribute="top" secondItem="2gu-tB-BwZ" secondAttribute="top" constant="40" id="rkU-DJ-MF0"/>
@@ -1148,6 +1165,9 @@
             <point key="canvasLocation" x="709" y="1418"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="8m7-LI-ggu"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <image name="0_0" width="220" height="172"/>
     </resources>
