@@ -12,6 +12,7 @@ class TimeTracking: UIViewController{
     @IBOutlet var logo: UIImageView!
     @IBOutlet var tableView: UITableView!
     
+
     var items = [TimeTrackingValuse]()
 
     struct TimeTrackingValuse {
@@ -30,6 +31,9 @@ class TimeTracking: UIViewController{
         tableView.delegate = self
         tableView.dataSource = self
         
+        let nib = UINib(nibName: "timeCellAlt", bundle: nil)
+        self.tableView.register(nib, forCellReuseIdentifier: "timeCellAlt")
+        
         let stringURL = "http://student07web.mssu.edu/serviceForTimeTracking.php"
         
         if let url = URL(string: stringURL){
@@ -46,7 +50,6 @@ class TimeTracking: UIViewController{
             task.resume()
         }
     }
-    
 
     func parseJson(_ data:Data) {
         var timeArray = [TimeTrackingValuse]()
@@ -96,9 +99,13 @@ extension TimeTracking: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: "timeCell", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "TimeTrackingIDFlyer", for: indexPath) //as! TimeTrackingCell
         
         cell.textLabel?.text = items[indexPath.row].submissionID
+        //cell.idLabel.text = items[indexPath.row].firstName
+        //cell.productNameLabel.text = items[indexPath.row].lastName
+        //cell.NO1.text = items[indexPath.row].firstName
+        //cell.NO2.text = items[indexPath.row].lastName
         
         return cell
     }
