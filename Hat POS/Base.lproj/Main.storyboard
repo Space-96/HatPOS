@@ -115,17 +115,20 @@
                                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g0G-sI-GUw">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="g0G-sI-GUw">
                                                 <rect key="frame" x="505" y="0.0" width="200" height="75"/>
                                                 <color key="backgroundColor" systemColor="systemTealColor"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="75" id="XPb-0E-Nxf"/>
                                                     <constraint firstAttribute="width" constant="200" id="agz-mU-PcX"/>
                                                 </constraints>
-                                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                                <state key="normal" title="Button">
+                                                <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                                                <state key="normal" title="Add Transaction">
                                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
+                                                <connections>
+                                                    <segue destination="WNf-lg-3Y8" kind="show" id="0Mx-mM-Br9"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -805,6 +808,120 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Vwf-sE-lpk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1555.6640625" y="-12.298682284040995"/>
+        </scene>
+        <!--Add Transaction View Controller-->
+        <scene sceneID="A0D-7F-kfU">
+            <objects>
+                <viewController id="WNf-lg-3Y8" customClass="AddTransactionViewController" customModule="Hat_POS" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="B9Y-1p-Ymq">
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="1366"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="0_0" translatesAutoresizingMaskIntoConstraints="NO" id="O9g-Aa-hIo" userLabel="Logo">
+                                <rect key="frame" x="60" y="110" width="220" height="172"/>
+                                <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add Transaction" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KkP-2Y-xn3">
+                                <rect key="frame" x="340.5" y="110" width="343.5" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="91" id="fqr-iF-VuB"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="50"/>
+                                <color key="textColor" systemColor="systemTealColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="60" translatesAutoresizingMaskIntoConstraints="NO" id="m5s-xf-jlz">
+                                <rect key="frame" x="151.5" y="512.5" width="721.5" height="341"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="34" translatesAutoresizingMaskIntoConstraints="NO" id="QTo-LX-meq">
+                                        <rect key="frame" x="0.0" y="0.0" width="721.5" height="36"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter employeeID" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NFK-Zu-hIr">
+                                                <rect key="frame" x="0.0" y="0.0" width="227.5" height="36"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                <color key="textColor" red="0.94290691609999999" green="0.71444696190000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter customerID" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oIf-9X-f2P">
+                                                <rect key="frame" x="261.5" y="0.0" width="223.5" height="36"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                <color key="textColor" red="0.94290691609999999" green="0.71444696190000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter productID" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1c9-0h-9uT">
+                                                <rect key="frame" x="519" y="0.0" width="202.5" height="36"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                <color key="textColor" red="0.94290691609999999" green="0.71444696190000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="158" translatesAutoresizingMaskIntoConstraints="NO" id="31n-3F-Gu5">
+                                        <rect key="frame" x="46" y="96" width="629.5" height="34"/>
+                                        <subviews>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Employee ID" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hmG-6p-ZMV" userLabel="employeeIDText">
+                                                <rect key="frame" x="0.0" y="0.0" width="108.5" height="34"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Customer ID" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bx6-Cj-3EV" userLabel="customerIDText">
+                                                <rect key="frame" x="266.5" y="0.0" width="108.5" height="34"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Product ID" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="DB2-8P-Is7" userLabel="productIDText">
+                                                <rect key="frame" x="533" y="0.0" width="96.5" height="34"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                        </subviews>
+                                    </stackView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9O4-9j-gGz" userLabel="statusMessage">
+                                        <rect key="frame" x="235.5" y="190" width="250" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="250" id="i7Q-01-Emi"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="0.94290691609999999" green="0.71444696190000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LRT-O0-6Xo">
+                                        <rect key="frame" x="252.5" y="300" width="216" height="41"/>
+                                        <color key="backgroundColor" systemColor="systemYellowColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                        <state key="normal" title="ADD TRANSACTION">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="addButtonPressed:" destination="WNf-lg-3Y8" eventType="touchUpInside" id="kbi-Yl-RH1"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="dtp-d1-fEB"/>
+                        <color key="backgroundColor" red="0.1921314895" green="0.19217148419999999" blue="0.19212898610000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="m5s-xf-jlz" firstAttribute="centerY" secondItem="B9Y-1p-Ymq" secondAttribute="centerY" id="0YN-Hp-2vY"/>
+                            <constraint firstItem="m5s-xf-jlz" firstAttribute="centerX" secondItem="B9Y-1p-Ymq" secondAttribute="centerX" id="7Qe-2R-hEl"/>
+                            <constraint firstItem="O9g-Aa-hIo" firstAttribute="leading" secondItem="dtp-d1-fEB" secondAttribute="leading" constant="60" id="Ueu-TY-Z1P"/>
+                            <constraint firstItem="KkP-2Y-xn3" firstAttribute="top" secondItem="dtp-d1-fEB" secondAttribute="top" constant="60" id="aiK-fJ-isG"/>
+                            <constraint firstItem="O9g-Aa-hIo" firstAttribute="top" secondItem="dtp-d1-fEB" secondAttribute="top" constant="60" id="bBP-br-fH2"/>
+                            <constraint firstItem="KkP-2Y-xn3" firstAttribute="centerX" secondItem="B9Y-1p-Ymq" secondAttribute="centerX" id="d34-YT-SpK"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="cBB-ep-z9A"/>
+                    <connections>
+                        <outlet property="customerIDText" destination="bx6-Cj-3EV" id="ERt-zk-6er"/>
+                        <outlet property="employeeIDText" destination="hmG-6p-ZMV" id="ky7-3R-sBe"/>
+                        <outlet property="logo" destination="O9g-Aa-hIo" id="xJO-2V-no9"/>
+                        <outlet property="productIDText" destination="DB2-8P-Is7" id="Dhp-6b-AdL"/>
+                        <outlet property="statusMessage" destination="9O4-9j-gGz" id="tVR-JK-U4X"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5W2-QP-9To" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1132.6171875" y="715.95900439238653"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="CZ9-rr-WpH">

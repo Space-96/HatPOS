@@ -51,19 +51,15 @@ class HomeModel: NSObject {
     
     func parseJson(_ data:Data){
         
-        
         var invArray = [Inventory]()
         
         do {
             //Parse the data into location structs
         let jsonArray = try JSONSerialization.jsonObject(with: data, options: []) as! [Any]
-            
             // Loop through each result in the json array
             for jsonResult in jsonArray {
-                
                 // Cast json result as a dictionary
                 let jsonDict = jsonResult as! [String:String]
-                
                 // Create new Inventory and set its properties
                 let inv = Inventory(productID: jsonDict["productID"]!, productName: jsonDict["productName"]!, productDescription: jsonDict["productDescription"]!, unitPurchasePrice: jsonDict["unitPurchasePrice"]!, unitSalePrice: jsonDict["unitSalePrice"]!, quantity: jsonDict["quantity"]!, isActive: jsonDict["isActive"]!)
                 invArray.append(inv)
