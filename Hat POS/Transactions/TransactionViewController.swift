@@ -7,18 +7,20 @@
 
 import UIKit
 
-class TransactionViewController: UIViewController, TransactionModelDelegate, UITableViewDataSource, UITableViewDelegate, UISearchBarDelegate, UISearchResultsUpdating, UISearchControllerDelegate {
+class TransactionViewController: UIViewController, TransactionModelDelegate, UITableViewDataSource, UITableViewDelegate, UISearchBarDelegate {
     
     @IBOutlet weak var tableView: UITableView!
     
     @IBOutlet weak var Logo2: UIImageView!
     
     @IBOutlet weak var searchContainer: UIView!
+    @IBOutlet weak var searchBar: UISearchBar!
     
     var transactionModel = TransactionModel()
     var items = [Transactions]()
     var filteredTransactions = [Transactions]()
     var searchController = UISearchController()
+    var searchActive : Bool = false
     
     
     override func viewDidLoad() {
@@ -32,22 +34,8 @@ class TransactionViewController: UIViewController, TransactionModelDelegate, UIT
         //Initiate calling the items download
         transactionModel.getItems()
         transactionModel.delegate = self
-        searchController = ({
-                    let controller = UISearchController(searchResultsController: nil)
-                    controller.searchBar.frame = CGRect(x: 0, y: 0, width: 242, height: 44)
-                    controller.searchResultsUpdater = self
-                    controller.searchBar.becomeFirstResponder()
-                    controller.searchBar.delegate = self
-                    controller.delegate = self
-                    controller.searchBar.sizeToFit()
-                    controller.searchBar.showsCancelButton = false
-                    controller.searchBar.tintColor =  #colorLiteral(red: 0.2392156869, green: 0.6745098233, blue: 0.9686274529, alpha: 1)
-                    controller.searchBar.barTintColor =  #colorLiteral(red: 0.2392156869, green: 0.6745098233, blue: 0.9686274529, alpha: 1)
-                    controller.searchBar.placeholder = "Search transaction list.."
-                    searchContainer.addSubview(controller.searchBar)
-                      
-                    return controller
-                  })()
+        searchBar.delegate = self
+
 
         
         let nib = UINib(nibName: "TransactionCell", bundle: nil)
@@ -56,14 +44,6 @@ class TransactionViewController: UIViewController, TransactionModelDelegate, UIT
         
     }
     //These two functions adjust size and cancel button when search is being used or dismissed
-        func didPresentSearchController(_ searchController: UISearchController) {
-            searchController.searchBar.frame = CGRect(x: 0, y: 0, width: 242, height: 44.0)
-            searchController.searchBar.showsCancelButton = true
-        }
-        func didDismissSearchController(_ searchController: UISearchController) {
-            searchController.searchBar.frame = CGRect(x: 0, y: 0, width: 242, height: 44.0)
-            searchController.searchBar.showsCancelButton = false
-        }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -98,23 +78,37 @@ class TransactionViewController: UIViewController, TransactionModelDelegate, UIT
         
         return cell
     }
-    //MARK: - Search Bar function
-       func updateSearchResults(for searchController: UISearchController) {
+    //MARK: - Search Bar
+    
+    func searchBarTextDidBeginEditing(_ searchBar: UISearchBar) {
+        searchActive = true;
+    }
+    func searchBarTextDidEndEditing(_ searchBar: UISearchBar) {
+        searchActive = false;
+    }
+    func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
+        searchActive = false;
+    }
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        searchActive = false;
+    }
+    
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
            
-           if let searchTerm = searchController.searchBar.text, !searchTerm.isEmpty {
-               filteredTransactions = items.filter { result in return result.transactionID.contains(searchTerm) ||
+        if let searchTerm = searchController.searchBar.text, !searchTerm.isEmpty {
+            filteredTransactions = items.filter { result in return result.transactionID.contains(searchTerm) ||
                result.customerID.contains(searchTerm) ||
                result.employeeID.contains(searchTerm) ||
                result.productID.contains(searchTerm)
-           }
-           }
-           else
-           {
-               filteredTransactions = items
+        }
+        }
+        else
+        {
+            filteredTransactions = items
                
-           }
+        }
            
-           self.tableView.reloadData()
+        self.tableView.reloadData()
        }
 
     
