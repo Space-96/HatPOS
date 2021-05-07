@@ -11,17 +11,11 @@ class ProductViewController: UIViewController, HomeModelDelegate, UITableViewDat
     
     
     @IBOutlet weak var tableView: UITableView!
-    @IBOutlet weak var MainMenuView: UIView!
-    @IBOutlet weak var LogoutView: UIView!
     @IBOutlet weak var Logo: UIImageView!
-    @IBOutlet weak var TransactionButtonView: UIView!
     @IBOutlet weak var searchBar: UISearchBar!
-    
-    @IBOutlet weak var searchContainer: UIView!
     
     var homeModel = HomeModel()
     var items = [Inventory]()
-    var resultSearchController = UISearchController()
     var lookupItems = [Inventory]()
     var searchActive : Bool = false
 
@@ -39,19 +33,6 @@ class ProductViewController: UIViewController, HomeModelDelegate, UITableViewDat
         homeModel.delegate = self
         
         searchBar.delegate = self
-        
-       /* resultSearchController = ({
-            let controller = UISearchBar(searchResultsController: nil)
-            controller.searchBar.frame = CGRect(x: 0, y: 0, width: 745, height: 44)
-            controller.searchResultsUpdater = self
-            controller.searchBar.becomeFirstResponder()
-            controller.searchBar.delegate = self
-            controller.searchBar.showsCancelButton = false
-            controller.searchBar.autocapitalizationType = .words
-            controller.searchBar.placeholder = "Type description of product you wish to lookup.."
-            searchContainer.addSubview(controller.searchBar)
-            return controller
-        })()*/
 
         let nib = UINib(nibName: "InventoryCell", bundle: nil)
         self.tableView.register(nib, forCellReuseIdentifier: "InvCell")
@@ -59,16 +40,6 @@ class ProductViewController: UIViewController, HomeModelDelegate, UITableViewDat
         // Do any additional setup after loading the view.
     }
     //Functions to adjust size and cancel button
-    func didPresentSearchController(_ searchController: UISearchController){
-        resultSearchController.searchBar.frame = CGRect(x: 0, y: 0, width: 745, height: 44)
-        resultSearchController.searchBar.showsCancelButton = true
-        self.navigationController?.navigationBar.isTranslucent = true
-    }
-    func didDismissSearchController(_ searchController: UISearchController) {
-        resultSearchController.searchBar.frame = CGRect(x: 0, y: 0, width: 745, height: 44.0)
-        resultSearchController.searchBar.showsCancelButton = false
-        
-    }
     func searchBarTextDidBeginEditing(_ searchBar: UISearchBar) {
         searchActive = true;
     }

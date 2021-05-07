@@ -10,16 +10,13 @@ import UIKit
 class TransactionViewController: UIViewController, TransactionModelDelegate, UITableViewDataSource, UITableViewDelegate, UISearchBarDelegate {
     
     @IBOutlet weak var tableView: UITableView!
-    
     @IBOutlet weak var Logo2: UIImageView!
     
-    @IBOutlet weak var searchContainer: UIView!
     @IBOutlet weak var searchBar: UISearchBar!
     
     var transactionModel = TransactionModel()
     var items = [Transactions]()
     var filteredTransactions = [Transactions]()
-    var searchController = UISearchController()
     var searchActive : Bool = false
     
     
@@ -43,7 +40,6 @@ class TransactionViewController: UIViewController, TransactionModelDelegate, UIT
         self.tableView.rowHeight = UITableView.automaticDimension
         
     }
-    //These two functions adjust size and cancel button when search is being used or dismissed
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -95,7 +91,7 @@ class TransactionViewController: UIViewController, TransactionModelDelegate, UIT
     
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
            
-        if let searchTerm = searchController.searchBar.text, !searchTerm.isEmpty {
+        if let searchTerm = searchBar.text, !searchTerm.isEmpty {
             filteredTransactions = items.filter { result in return result.transactionID.contains(searchTerm) ||
                result.customerID.contains(searchTerm) ||
                result.employeeID.contains(searchTerm) ||
