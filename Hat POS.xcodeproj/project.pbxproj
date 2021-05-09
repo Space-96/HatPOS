@@ -17,6 +17,9 @@
 		C668BCCE2626398E00987903 /* TransactionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C668BCCC2626398E00987903 /* TransactionCell.xib */; };
 		C6B9C89426018A1D00108B9C /* InventoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6B9C89226018A1D00108B9C /* InventoryCell.swift */; };
 		C6B9C89526018A1D00108B9C /* InventoryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C6B9C89326018A1D00108B9C /* InventoryCell.xib */; };
+		C6BE303B26445D6200510F6F /* InventoryLookup.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6BE303A26445D6200510F6F /* InventoryLookup.swift */; };
+		C6C1C71C2645C69E00409FE0 /* AddTransaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6C1C71B2645C69D00409FE0 /* AddTransaction.swift */; };
+		C6C1C7202645C8EE00409FE0 /* Addition.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6C1C71F2645C8EE00409FE0 /* Addition.swift */; };
 		C6C9997725FA75F700C8ECC5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6C9997625FA75F700C8ECC5 /* AppDelegate.swift */; };
 		C6C9997925FA75F700C8ECC5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6C9997825FA75F700C8ECC5 /* SceneDelegate.swift */; };
 		C6C9997B25FA75F700C8ECC5 /* ProductViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6C9997A25FA75F700C8ECC5 /* ProductViewController.swift */; };
@@ -46,6 +49,9 @@
 		C668BCCC2626398E00987903 /* TransactionCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TransactionCell.xib; sourceTree = "<group>"; };
 		C6B9C89226018A1D00108B9C /* InventoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InventoryCell.swift; sourceTree = "<group>"; };
 		C6B9C89326018A1D00108B9C /* InventoryCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InventoryCell.xib; sourceTree = "<group>"; };
+		C6BE303A26445D6200510F6F /* InventoryLookup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InventoryLookup.swift; sourceTree = "<group>"; };
+		C6C1C71B2645C69D00409FE0 /* AddTransaction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTransaction.swift; sourceTree = "<group>"; };
+		C6C1C71F2645C8EE00409FE0 /* Addition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Addition.swift; sourceTree = "<group>"; };
 		C6C9997325FA75F700C8ECC5 /* Hat POS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Hat POS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C6C9997625FA75F700C8ECC5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C6C9997825FA75F700C8ECC5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -100,6 +106,7 @@
 				C6C9997A25FA75F700C8ECC5 /* ProductViewController.swift */,
 				C6C9998E25FBFE6A00C8ECC5 /* Inventory.swift */,
 				C6C9998B25FBFD9000C8ECC5 /* HomeModel.swift */,
+				C6BE303A26445D6200510F6F /* InventoryLookup.swift */,
 			);
 			path = ProductInventory;
 			sourceTree = "<group>";
@@ -142,6 +149,15 @@
 			path = Transactions;
 			sourceTree = "<group>";
 		};
+		C6C1C71E2645C6B100409FE0 /* Add */ = {
+			isa = PBXGroup;
+			children = (
+				C6C1C71B2645C69D00409FE0 /* AddTransaction.swift */,
+				C6C1C71F2645C8EE00409FE0 /* Addition.swift */,
+			);
+			path = Add;
+			sourceTree = "<group>";
+		};
 		C6C9996A25FA75F700C8ECC5 = {
 			isa = PBXGroup;
 			children = (
@@ -167,6 +183,7 @@
 				C6C9997C25FA75F700C8ECC5 /* Main.storyboard */,
 				D9F7EA3026323A090005826D /* HomeViewController.swift */,
 				D9BB6758263B7529005CE4EC /* Delete */,
+				C6C1C71E2645C6B100409FE0 /* Add */,
 				D9BB6759263B7563005CE4EC /* SignIn */,
 				C6BA4AB526431716000B00B7 /* ProductInventory */,
 				C6BA4AB92643186C000B00B7 /* Transactions */,
@@ -274,6 +291,7 @@
 			files = (
 				D9F7EA2E263239F30005826D /* SignInViewController.swift in Sources */,
 				D9F7EA3726335FE70005826D /* SignIn.swift in Sources */,
+				C6C1C71C2645C69E00409FE0 /* AddTransaction.swift in Sources */,
 				C61C6427261F74C400220911 /* TransactionModel.swift in Sources */,
 				C6C9998C25FBFD9000C8ECC5 /* HomeModel.swift in Sources */,
 				C6C9997B25FA75F700C8ECC5 /* ProductViewController.swift in Sources */,
@@ -283,8 +301,10 @@
 				C6B9C89426018A1D00108B9C /* InventoryCell.swift in Sources */,
 				D9BB6755263B72AE005CE4EC /* DeleteTransactionViewController.swift in Sources */,
 				D9BB6751263B7217005CE4EC /* DeleteOptionsViewController.swift in Sources */,
+				C6C1C7202645C8EE00409FE0 /* Addition.swift in Sources */,
 				C6C9998F25FBFE6A00C8ECC5 /* Inventory.swift in Sources */,
 				C6C9997725FA75F700C8ECC5 /* AppDelegate.swift in Sources */,
+				C6BE303B26445D6200510F6F /* InventoryLookup.swift in Sources */,
 				D9BB675B263B7824005CE4EC /* Delete.swift in Sources */,
 				B5430FFF264430340056EB9C /* TimeTracking.swift in Sources */,
 				D9BB6757263B72B9005CE4EC /* DeleteTimeViewController.swift in Sources */,
