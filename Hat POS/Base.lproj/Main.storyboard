@@ -31,7 +31,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="87" translatesAutoresizingMaskIntoConstraints="NO" id="beI-Cz-VFW">
-                                <rect key="frame" x="159.5" y="402.5" width="705" height="561"/>
+                                <rect key="frame" x="159.5" y="483.5" width="705" height="399"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="305" translatesAutoresizingMaskIntoConstraints="NO" id="iB4-Ek-qs8">
                                         <rect key="frame" x="0.0" y="0.0" width="705" height="75"/>
@@ -71,8 +71,23 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="305" translatesAutoresizingMaskIntoConstraints="NO" id="eFa-bd-CZP">
                                         <rect key="frame" x="0.0" y="162" width="705" height="75"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sfp-4E-I2v">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="g0G-sI-GUw">
                                                 <rect key="frame" x="0.0" y="0.0" width="200" height="75"/>
+                                                <color key="backgroundColor" systemColor="systemYellowColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="75" id="XPb-0E-Nxf"/>
+                                                    <constraint firstAttribute="width" constant="200" id="agz-mU-PcX"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                                                <state key="normal" title="Add Transaction">
+                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <segue destination="WNf-lg-3Y8" kind="show" id="0Mx-mM-Br9"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sfp-4E-I2v">
+                                                <rect key="frame" x="505" y="0.0" width="200" height="75"/>
                                                 <color key="backgroundColor" systemColor="systemYellowColor"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="75" id="YXD-YG-8Ch"/>
@@ -86,58 +101,14 @@
                                                     <segue destination="kuZ-qQ-CIA" kind="show" id="9Wf-C5-L98"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JQ3-tg-iBJ">
-                                                <rect key="frame" x="505" y="0.0" width="200" height="75"/>
-                                                <color key="backgroundColor" systemColor="systemYellowColor"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" constant="200" id="DFP-v1-mAf"/>
-                                                    <constraint firstAttribute="height" constant="75" id="Reb-EQ-ENW"/>
-                                                </constraints>
-                                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                                <state key="normal" title="Button">
-                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                </state>
-                                            </button>
-                                        </subviews>
-                                    </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="305" translatesAutoresizingMaskIntoConstraints="NO" id="hIK-ed-4LP">
-                                        <rect key="frame" x="0.0" y="324" width="705" height="75"/>
-                                        <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WRc-xB-1xd">
-                                                <rect key="frame" x="0.0" y="0.0" width="200" height="75"/>
-                                                <color key="backgroundColor" systemColor="systemTealColor"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="75" id="DHC-Rn-OWZ"/>
-                                                    <constraint firstAttribute="width" constant="200" id="zYe-y7-y9W"/>
-                                                </constraints>
-                                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                                <state key="normal" title="Button">
-                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                </state>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="g0G-sI-GUw">
-                                                <rect key="frame" x="505" y="0.0" width="200" height="75"/>
-                                                <color key="backgroundColor" systemColor="systemTealColor"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="75" id="XPb-0E-Nxf"/>
-                                                    <constraint firstAttribute="width" constant="200" id="agz-mU-PcX"/>
-                                                </constraints>
-                                                <fontDescription key="fontDescription" type="system" pointSize="28"/>
-                                                <state key="normal" title="Add Transaction">
-                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                </state>
-                                                <connections>
-                                                    <segue destination="WNf-lg-3Y8" kind="show" id="0Mx-mM-Br9"/>
-                                                </connections>
-                                            </button>
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="305" translatesAutoresizingMaskIntoConstraints="NO" id="jQR-r7-nQ0">
-                                        <rect key="frame" x="0.0" y="486" width="705" height="75"/>
+                                        <rect key="frame" x="0.0" y="324" width="705" height="75"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FRM-GG-OtK">
                                                 <rect key="frame" x="0.0" y="0.0" width="200" height="75"/>
-                                                <color key="backgroundColor" systemColor="systemYellowColor"/>
+                                                <color key="backgroundColor" systemColor="systemTealColor"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="200" id="KbJ-rC-bhj"/>
                                                     <constraint firstAttribute="height" constant="75" id="Unx-Qq-5x9"/>
@@ -152,7 +123,7 @@
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FBj-Yb-XI5">
                                                 <rect key="frame" x="505" y="0.0" width="200" height="75"/>
-                                                <color key="backgroundColor" systemColor="systemYellowColor"/>
+                                                <color key="backgroundColor" systemColor="systemTealColor"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="200" id="9tJ-Ll-Lo3"/>
                                                     <constraint firstAttribute="height" constant="75" id="nEC-Z2-e0G"/>
