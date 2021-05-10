@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AF01792C264962AD00F5F943 /* TimeTrackingStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF01792B264962AD00F5F943 /* TimeTrackingStruct.swift */; };
+		AF1DAD122648AE1600743C78 /* TimeTrackingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF1DAD112648AE1600743C78 /* TimeTrackingModel.swift */; };
 		B5430FFF264430340056EB9C /* TimeTracking.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5430FFE264430340056EB9C /* TimeTracking.swift */; };
 		B543100926446BB70056EB9C /* TimeTrackingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B543100726446BB70056EB9C /* TimeTrackingCell.swift */; };
 		B543100A26446BB70056EB9C /* TimeTrackingCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B543100826446BB70056EB9C /* TimeTrackingCell.xib */; };
@@ -39,6 +41,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		AF01792B264962AD00F5F943 /* TimeTrackingStruct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeTrackingStruct.swift; sourceTree = "<group>"; };
+		AF1DAD112648AE1600743C78 /* TimeTrackingModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeTrackingModel.swift; sourceTree = "<group>"; };
 		B5430FFE264430340056EB9C /* TimeTracking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeTracking.swift; sourceTree = "<group>"; };
 		B543100726446BB70056EB9C /* TimeTrackingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeTrackingCell.swift; sourceTree = "<group>"; };
 		B543100826446BB70056EB9C /* TimeTrackingCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TimeTrackingCell.xib; sourceTree = "<group>"; };
@@ -87,6 +91,8 @@
 			isa = PBXGroup;
 			children = (
 				B5430FFE264430340056EB9C /* TimeTracking.swift */,
+				AF1DAD112648AE1600743C78 /* TimeTrackingModel.swift */,
+				AF01792B264962AD00F5F943 /* TimeTrackingStruct.swift */,
 			);
 			name = TimeTracking;
 			sourceTree = "<group>";
@@ -104,9 +110,9 @@
 			isa = PBXGroup;
 			children = (
 				C6C9997A25FA75F700C8ECC5 /* ProductViewController.swift */,
-				C6C9998E25FBFE6A00C8ECC5 /* Inventory.swift */,
 				C6C9998B25FBFD9000C8ECC5 /* HomeModel.swift */,
 				C6BE303A26445D6200510F6F /* InventoryLookup.swift */,
+				C6C9998E25FBFE6A00C8ECC5 /* Inventory.swift */,
 			);
 			path = ProductInventory;
 			sourceTree = "<group>";
@@ -294,6 +300,7 @@
 				C6C1C71C2645C69E00409FE0 /* AddTransaction.swift in Sources */,
 				C61C6427261F74C400220911 /* TransactionModel.swift in Sources */,
 				C6C9998C25FBFD9000C8ECC5 /* HomeModel.swift in Sources */,
+				AF1DAD122648AE1600743C78 /* TimeTrackingModel.swift in Sources */,
 				C6C9997B25FA75F700C8ECC5 /* ProductViewController.swift in Sources */,
 				C61C6424261F6D8600220911 /* Transactions.swift in Sources */,
 				C61C642A261F7DCC00220911 /* TransactionViewController.swift in Sources */,
@@ -307,6 +314,7 @@
 				C6BE303B26445D6200510F6F /* InventoryLookup.swift in Sources */,
 				D9BB675B263B7824005CE4EC /* Delete.swift in Sources */,
 				B5430FFF264430340056EB9C /* TimeTracking.swift in Sources */,
+				AF01792C264962AD00F5F943 /* TimeTrackingStruct.swift in Sources */,
 				D9BB6757263B72B9005CE4EC /* DeleteTimeViewController.swift in Sources */,
 				C668BCCD2626398E00987903 /* TransactionCell.swift in Sources */,
 				D9BB6753263B729B005CE4EC /* DeleteProductViewController.swift in Sources */,
