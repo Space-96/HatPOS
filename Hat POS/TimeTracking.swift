@@ -4,6 +4,7 @@
 //
 //  Created by Levi Knight on 5/6/21.
 //
+//The color palet was chosen in Database Managment before these assignment details were released
 
 import UIKit
 
@@ -45,6 +46,11 @@ class TimeTracking: UIViewController, UITableViewDataSource, UITableViewDelegate
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
             return items.count
+    }
+    
+    func tableView(_ tableView: UITableView, titleForHeaderInSection
+                                section: Int) -> String? {
+       return "SubmissionID  Firstname               Lastname                                            clocking    dateAndTime"
     }
         
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
