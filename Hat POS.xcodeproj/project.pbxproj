@@ -94,8 +94,8 @@
 		B543100626446B8F0056EB9C /* TimeTrackingCell */ = {
 			isa = PBXGroup;
 			children = (
-				B543100726446BB70056EB9C /* TimeTrackingCell.swift */,
 				B543100826446BB70056EB9C /* TimeTrackingCell.xib */,
+				B543100726446BB70056EB9C /* TimeTrackingCell.swift */,
 			);
 			path = TimeTrackingCell;
 			sourceTree = "<group>";
@@ -177,11 +177,11 @@
 		C6C9997525FA75F700C8ECC5 /* Hat POS */ = {
 			isa = PBXGroup;
 			children = (
-				B54310002644305E0056EB9C /* TimeTracking */,
 				C6C9997625FA75F700C8ECC5 /* AppDelegate.swift */,
 				C6C9997825FA75F700C8ECC5 /* SceneDelegate.swift */,
 				C6C9997C25FA75F700C8ECC5 /* Main.storyboard */,
 				D9F7EA3026323A090005826D /* HomeViewController.swift */,
+				B54310002644305E0056EB9C /* TimeTracking */,
 				D9BB6758263B7529005CE4EC /* Delete */,
 				C6C1C71E2645C6B100409FE0 /* Add */,
 				D9BB6759263B7563005CE4EC /* SignIn */,

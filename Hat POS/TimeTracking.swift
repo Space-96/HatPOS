@@ -31,8 +31,8 @@ class TimeTracking: UIViewController{
         tableView.delegate = self
         tableView.dataSource = self
         
-        let nib = UINib(nibName: "timeCellAlt", bundle: nil)
-        self.tableView.register(nib, forCellReuseIdentifier: "timeCellAlt")
+        let nib = UINib(nibName: "TimeTrackingCell", bundle: nil)
+        self.tableView.register(nib, forCellReuseIdentifier: "TimeTrackingIDFlyerLabel")
         
         let stringURL = "http://student07web.mssu.edu/serviceForTimeTracking.php"
         
@@ -99,13 +99,16 @@ extension TimeTracking: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: "TimeTrackingIDFlyer", for: indexPath) //as! TimeTrackingCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "TimeTrackingIDFlyerLabel", for: indexPath) as! TimeTrackingCell
         
-        cell.textLabel?.text = items[indexPath.row].submissionID
+        //cell.textLabel?.text = items[indexPath.row].submissionID
         //cell.idLabel.text = items[indexPath.row].firstName
         //cell.productNameLabel.text = items[indexPath.row].lastName
-        //cell.NO1.text = items[indexPath.row].firstName
-        //cell.NO2.text = items[indexPath.row].lastName
+        cell.NO1.text = items[indexPath.row].submissionID
+        cell.NO2.text = items[indexPath.row].firstName
+        cell.NO3.text = items[indexPath.row].lastName
+        cell.NO4.text = items[indexPath.row].clocking
+        cell.NO5.text = items[indexPath.row].dateAndTime
         
         return cell
     }
