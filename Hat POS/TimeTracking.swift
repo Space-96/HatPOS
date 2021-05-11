@@ -4,7 +4,7 @@
 //
 //  Created by Levi Knight on 5/6/21.
 //
-//The color palet was chosen in Database Managment before these assignment details were released
+//Color Palette no. 273305
 
 import UIKit
 
